@@ -2,58 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>neostetic.exe</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>neostetic</title>
+    <link rel="stylesheet" href="res/css/main.css">
     <script src="https://kit.fontawesome.com/631210626b.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
-    <link rel="manifest" href="/ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
 </head>
-<body class="centered" onload="generateTitle(); generateColor()">
-<div id="container" class="popup border">
-    <div class="popup-title nocopy">
-        <span id="title"></span>
-        <button class="popup-title-button border" onclick="generateTitle(); generateColor()">x</button>
-        <button class="popup-title-button-window border" onclick="generateColor()">
-            <div class="popup-title-button-window-icon"></div>
-        </button>
-        <button class="popup-title-button border" onclick="generateTitle()">_</button>
+<body>
+<div id="container">
+    <div class="header fl not-copy">
+        <div class="auto-size">
+            <div class="fl">
+                <a href="index.html" class="head-link link">neostetic</a>
+            </div>
+            <div class="header-menu fr">
+                <a href="index.html" class="head-link-menu link">Home</a>
+                <a href="index.html" class="head-link-menu link">Projects</a>
+                <a href="index.html" class="head-link-menu link">School</a>
+                <a href="index.html" class="head-link-menu link">About</a>
+            </div>
+        </div>
     </div>
-    <div class="popup-content">
-        &nbsp; &nbsp; &nbsp; _&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;___&nbsp; &nbsp; &nbsp; &nbsp;__&nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;__ &nbsp; <br>
-        &nbsp; &nbsp; &nbsp;(_)__&nbsp;____&nbsp; /&nbsp;_&nbsp;\___&nbsp; /&nbsp;/__&nbsp;________&nbsp;/&nbsp;/__<br>
-        &nbsp; &nbsp; /&nbsp;/&nbsp;_&nbsp;`/&nbsp;_&nbsp;\/&nbsp;___/&nbsp;_&nbsp;\/&nbsp;/&nbsp;_&nbsp;`/&nbsp;__/&nbsp;-_)&nbsp;
-        '_/<br>
-        &nbsp;__/&nbsp;/\_,_/_//_/_/&nbsp; &nbsp;\___/_/\_,_/\__/\__/_/\_\&nbsp;<br>
-        |___/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
-        <b>Supported by</b>
-        neostetic<br>
-        &copy; 2021 Jan Poláček<br>
-        <button class="border nocopy" onclick="redirect('twitter')">
-            Cancel<i class="fab fa-twitter"></i>
-        </button>
-        <button class="border nocopy" onclick="redirect('mail')">
-            Report<i class="fas fa-envelope"></i>
-        </button>
+    <div class="content content-padding bg1 fl">
+        <div class="auto-size">
+            <div class="content-header fl">
+                Sharing my Experiences and Projects
+                <div class="content-text fl">
+                    I made this website, so you can easily search what I am up to right now or in the future
+                </div>
+                <div class="content-text fl not-copy">
+                    <a href="index.html">
+                        <button class="content-button">
+                            Projects
+                        </button>
+                    </a>
+                    <a href="index.html">
+                        <button class="content-button-alternate">
+                            School
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="content-header fr not-copy">
+                <img src="res/assets/disk.gif" class="content-header-img"/>
+            </div>
+        </div>
+    </div>
+    <div class="content fl">
+        <div class="auto-size">
+            <p>
+                <b>Hi, I'm neostetic,</b><br>
+                I am designer, developer and musician. This is my personal website, where I am going to post most stuff
+                about myself and my works, more like a portfolio. Welcome to the website!
+                <img src="res/assets/david pinkish.png" class="not-copy" width="100%"/>
+            </p>
+            <p>
+                <b>My projects</b><br>
+                These are one of my works I've done in the past.
+                <div class="content-projects"></div>
+            </p>
+            WORK IN PROGRESS
+        </div>
+    </div>
+    <div class="footer not-copy fl">
+        <div class="auto-size">
+            <a href="https://www.facebook.com/honza.polacek.1"/>
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/neostetic">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com/honzikalejinej">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/neostetic">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://open.spotify.com/user/hktbjcispuo0lj0uix0x1lovh">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="mailto:gg.polacek@gmail.com">
+                <i class="fas fa-at"></i>
+            </a>
+            <br>
+            <a href="index.html">HOME</a> -
+            <a href="index.html">PROJECTS</a> -
+            <a href="index.html">SCHOOL</a> -
+            <a href="index.html">ABOUT</a>
+        </div>
+        <div class="footer-sign">© 2021 - Jan Poláček</div>
     </div>
 </div>
-<div class="footer nocopy">&copy; 2021 Jan Poláček</div>
-<script src="script/main-js.js"></script>
+<script src="res/js/main.js"></script>
 </body>
 </html>
