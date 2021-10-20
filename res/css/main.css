@@ -57,7 +57,7 @@ a:active {
     text-align: right;
 }
 
-.not-copy {
+.not-copy, br {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -77,6 +77,8 @@ a:active {
 .flex-center {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .content-button, .content-button-alternate {
@@ -167,12 +169,59 @@ a:active {
     width: 100%;
 }
 
+.content-projects {
+    width: 100%;
+}
+
+.content-projects > div:nth-child(1){background: url("../assets/projects/project1.png");background-size: cover;}
+.content-projects > div:nth-child(2){background: url("../assets/projects/project2.png");background-size: cover;}
+.content-projects > div:nth-child(3){background: url("../assets/projects/project3.png");background-size: cover;}
+.content-projects > div:nth-child(4){background: url("../assets/projects/project4.png");background-size: cover;}
+
+
+.content-projects > div {
+    width: 230px;
+    height: 230px;
+    transition: .2s;
+    transform: scale(1) rotateX(0) rotateY(0);
+    cursor: pointer;
+}
+
+.content-projects > div:hover {
+    animation: anim-3d-shake infinite 3s;
+    perspective: 1000px;
+}
+
+@keyframes anim-3d-shake {
+    0% {
+        transform: scale(1.1) rotateX(5deg) rotateY(5deg);
+    }
+    25% {
+        transform: scale(1.1) rotateX(5deg) rotateY(-5deg);
+    }
+    50% {
+        transform: scale(1.1) rotateX(-5deg) rotateY(-5deg);
+    }
+    75% {
+        transform: scale(1.1) rotateX(-5deg) rotateY(5deg);
+    }
+    100% {
+        transform: scale(1.1) rotateX(5deg) rotateY(5deg);
+    }
+}
+
+#projectText {
+    padding-top: 280px;
+    text-align: center;
+    height: 400px;
+}
+
 .footer {
     width: 100%;
     background: var(--base-color1);
     color: var(--base-color3);
     text-align: center;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .footer > .auto-size > a >  i {
@@ -190,7 +239,7 @@ a:active {
 }
 
 .footer-sign {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 14px;
     padding: 2px 0;
     background: var(--base-color2);
