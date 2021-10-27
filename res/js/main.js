@@ -21,3 +21,10 @@ function setMain(id) {
     let element = document.getElementById(id);
     element.classList.add("onpage");
 }
+
+document.getElementById("errorClick").onclick = function () {
+    document.getElementById("errorMessage").style.opacity = 0;
+    setTimeout(function (){
+        document.getElementById("errorMessage").style.display = "none";
+    }, 490)
+}
