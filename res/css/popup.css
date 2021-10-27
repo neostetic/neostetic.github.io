@@ -27,7 +27,7 @@
 
 .popup-links > a {
     color: var(--font);
-    padding: 0 6px;
+    padding: 0 10px;
 }
 
 .popup-links > a > i {
@@ -79,4 +79,14 @@
 
 .tg-0pky {
     text-align: right;
+}
+
+.tg-0pky > a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tg-0pky > a > i {
+    font-size: 12px;
 }
