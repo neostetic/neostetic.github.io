@@ -19,6 +19,7 @@
     background: #0d1117;
     font-family: 'Noto Sans JP', sans-serif;
     color: var(--gh-font);
+    border: 3px solid var(--gh-background-alt);
 }
 
 .gh-avatar {
@@ -35,7 +36,7 @@
 .gh-avatar-img {
     border-radius: 50%;
     border: 2px solid var(--gh-background-alt);
-    animation: gh-rotate 4s infinite linear;
+    animation: gh-rotate 8s infinite linear;
 }
 
 .gh-avatar-name {

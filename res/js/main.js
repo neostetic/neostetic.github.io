@@ -1,6 +1,8 @@
 const popupAnim = "popUp .8s ease";
 const popdowmAnim = "popDown .8s ease";
 
+let projectInner = document.getElementById("projectInner");
+
 let about = document.getElementById("about-popup");
 document.getElementById("about-click").onclick = function () {
     about.style.display = "table";
