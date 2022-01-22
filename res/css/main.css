@@ -279,6 +279,22 @@ html, body {
     background: var(--font);
 }
 
+.school-container {
+    border: 2px solid rgba(255,255,255,.05);
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.school-container > ul > li > a, p > a {
+    color: #00c8b7;
+    text-decoration: none;
+}
+
+.school-container > ul > li > a:hover, p > a:hover {
+    text-decoration: underline;
+}
+
 .footer {
     bottom: 0;
     position: absolute;
