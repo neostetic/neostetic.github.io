@@ -2,218 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>neostetic</title>
-    <link rel="stylesheet" href="res/css/error.css">
-    <link rel="stylesheet" href="res/css/main.css">
-    <link rel="stylesheet" href="res/css/github.css">
-    <link rel="stylesheet" href="res/css/popup.css">
+    <title>neostetic.exe</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/631210626b.js" crossorigin="anonymous"></script>
-    <!--
-           _             ____        __                __
-          (_)___ _____  / __ \____  / /___ _________  / /__
-         / / __ `/ __ \/ /_/ / __ \/ / __ `/ ___/ _ \/ //_/
-        / / /_/ / / / / ____/ /_/ / / /_/ / /__/  __/ ,<
-    __/ /\__,_/_/ /_/_/    \____/_/\__,_/\___/\___/_/|_|
-  /___/
-
-            © 2021 - Jan Polacek (neostetic)
--->
+    <link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+    <link rel="manifest" href="/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
 </head>
-<body>
-<div id="errorMessage">
-    <div class="center">
-        Please note, that this page is being redesigned!<br>
-        <br>
-        <a id="errorClick">Okay, I understand!</a>
+<body class="centered" onload="generateTitle(); generateColor()">
+<div id="container" class="popup border">
+    <div class="popup-title nocopy">
+        <span id="title"></span>
+        <button class="popup-title-button border" onclick="generateTitle(); generateColor()">x</button>
+        <button class="popup-title-button-window border" onclick="generateColor()">
+            <div class="popup-title-button-window-icon"></div>
+        </button>
+        <button class="popup-title-button border" onclick="generateTitle()">_</button>
+    </div>
+    <div class="popup-content">
+        &nbsp; &nbsp; &nbsp; _&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;___&nbsp; &nbsp; &nbsp; &nbsp;__&nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;__ &nbsp; <br>
+        &nbsp; &nbsp; &nbsp;(_)__&nbsp;____&nbsp; /&nbsp;_&nbsp;\___&nbsp; /&nbsp;/__&nbsp;________&nbsp;/&nbsp;/__<br>
+        &nbsp; &nbsp; /&nbsp;/&nbsp;_&nbsp;`/&nbsp;_&nbsp;\/&nbsp;___/&nbsp;_&nbsp;\/&nbsp;/&nbsp;_&nbsp;`/&nbsp;__/&nbsp;-_)&nbsp;
+        '_/<br>
+        &nbsp;__/&nbsp;/\_,_/_//_/_/&nbsp; &nbsp;\___/_/\_,_/\__/\__/_/\_\&nbsp;<br>
+        |___/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+        <b>Supported by</b>
+        neostetic<br>
+        &copy; 2021 Jan Poláček<br>
+        <button class="border nocopy" onclick="redirect('twitter')">
+            Cancel<i class="fab fa-twitter"></i>
+        </button>
+        <button class="border nocopy" onclick="redirect('mail')">
+            Report<i class="fas fa-envelope"></i>
+        </button>
     </div>
 </div>
-<div class="header noselect">
-    <div class="header-left fl">
-        <a href="https://neostetic.github.io">NEOSTETIC</a>
-    </div>
-    <div class="header-center fl">
-        <a href="#home" onclick="setMain('a-home')" id="a-home" class="onpage">HOME</a>
-        <a href="#github" onclick="setMain('a-github')" id="a-github">GITHUB</a>
-        <a href="#projects" onclick="setMain('a-projects')" id="a-projects">PROJECTS</a>
-        <a href="#school" onclick="setMain('a-school')" id="a-school">SCHOOL</a>
-    </div>
-    <div class="header-right fl">
-        <a id="about-click" href="#about">CONTACT</a>
-    </div>
-</div>
-<div class="container color1" id="home">
-    <div class="center title-text auto-width fl">
-        <span>I'M</span><br>
-        <a href="https://dribbble.com/neostetic" target="_blank" id="icon-d"><i class="fas fa-pencil-ruler"></i></a><br>
-        <a href="https://soundcloud.com/overyoghurth" target="_blank" id="icon-m"><i class="fas fa-music"></i></a><br>
-        <a href="https://github.com/neostetic" target="_blank" id="icon-w"><i class="fas fa-file-code"></i></a><br>
-        <span>and more</span>
-    </div>
-    <div class="center clicktr noselect auto-width fr">
-        <img src="res/assets/avatar.png" class="foreground fr"/>
-    </div>
-    <div class="footer">
-        <a href="#github" onclick="setMain('a-github')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
-</div>
-<div class="container color2" id="github">
-    <div class="footer">
-        <div class="center">
-            <div class="github auto-width noselect">
-                <div class="gh-avatar fl">
-                    <img src="https://avatars.githubusercontent.com/u/83291717?v=4" class="gh-avatar-img"/>
-                    <div class="gh-avatar-name">
-                        <span class="gh-avatar-name-header">Jan Polacek</span><br>
-                        <span class="gh-avatar-name-user">neostetic</span>
-                    </div>
-                </div>
-                <div class="gh-pins fl">
-                    <span class="gh-pins-text ">Pinned</span>
-                    <div class="gh-pins-pin">
-                        <div class="gh-pins-pin-header">
-                            <div class="gh-pins-pin-header-half fl">
-                                <i class="far fa-bookmark"></i> <a href="https://github.com/neostetic/School-Zapisky" target="_blank">School-Zapisky</a>
-                            </div>
-                            <div class="gh-pins-pin-header-half fr">
-                                <span>Public</span>
-                            </div>
-                        </div>
-                        Zápisy ze Školy xdxd
-                    </div>
-                    <div class="gh-pins-pin">
-                        <div class="gh-pins-pin-header">
-                            <div class="gh-pins-pin-header-half fl">
-                                <i class="far fa-bookmark"></i>
-                                <a href="https://github.com/cookieclicker98/cookieclicker98.github.io" target="_blank">cookieclicker98/<b>cookieclicker98.github.io</b></a>
-                            </div>
-                            <div class="gh-pins-pin-header-half fr">
-                                <span>Public</span>
-                            </div>
-                        </div>
-                        Cookie Clicker in style of 90's Windows 98's look
-                    </div>
-                    <div class="gh-pins-pin">
-                        <div class="gh-pins-pin-header">
-                            <div class="gh-pins-pin-header-half fl">
-                                <i class="far fa-bookmark"></i> <a href="https://github.com/machinegunfly/machinegunfly.github.io" target="_blank">machinegunfly/<b>machinegunfly.github.io</b></a>
-                            </div>
-                            <div class="gh-pins-pin-header-half fr">
-                                <span>Public</span>
-                            </div>
-                        </div>
-                        Show-Off website for Clients<br>
-                        <br>
-                        <div class="gh-pins-pin-css fl"></div> CSS
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/neostetic" target="_blank">
-                <button class="button">VISIT GITHUB</button>
-            </a>
-        </div>
-        <a href="#projects" onclick="setMain('a-projects')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
-</div>
-<div class="container color3" id="projects">
-    <div class="center auto-width">
-        <div class="projects-container">
-            <h1>PROJECTS:</h1>
-            <a href="work/aquaz">TEAM AQUAZ</a><br>
-            <a href="work/over-yoghurt">OVER YOGHURT</a><br>
-            <a href="work/quil">TEAM QUIL</a><br>
-            <a href="work/lowpulse">TEAM LOWPULSE</a><br>
-            <a href="work/pbp-holder">PBP-HOLDER.cz</a><br>
-            <a href="work/machinegunfly">MACHINE GUN FLY</a><br>
-            <a href="work/cookieclicker98">COOKIECLICKER98</a><br>
-        </div>
-    </div>
-    <div class="footer">
-        <a href="#school" onclick="setMain('a-school')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
-</div>
-<div class="container color4" id="school">
-    <div class="center auto-width">
-        <div class="school-container">
-            <b>School Zápisky</b>
-            <ul>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/CIT">💯 Číslicová Technika (CIT)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/DBA">📂 Databzové Systémy (DBA)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/OPS">📴 Operační Systémy (OPS)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/blob/main/PRO/README.md">💾 Programování (PRO)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/SIT">🔌 Počítačové Sítě (SIT)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/WAP">🌐 Webové Aplikace (WAP)</a></li>
-            </ul>
-            <b>Učitelé na Github</b>
-            <ul>
-                <li><a href="https://github.com/honziktillu">Jan Till</a></li>
-                <li><a href="https://github.com/LukasMazl">Lukáš Mázl</a></li>
-                <li><a href="https://github.com/KRBNJSF">🤡</a></li>
-            </ul>
-            <b>SPSMB Group</b>
-            <ul>
-                <li><a href="https://github.com/SPSMB">Group</a></li>
-            </ul>
-            <p align="right">
-                <a href="https://github.com/neostetic">Go Home</a>
-            </p>
-        </div>
-    </div>
-    <div class="footer">
-        <a href="#home" onclick="setMain('a-home')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
-</div>
-<div id="about-popup" class="popup center">
-    <div class="popup-x noselect"><span class="button-x" id="about-popup-x">X</span></div>
-    <div class="popup-content" align="center">
-        <h2>CONTACT:</h2>
-        <table>
-            <tr>
-                <td class="tg-fymr">Name:</td>
-                <td class="tg-0pky">Jan Poláček</td>
-            </tr>
-            <tr>
-                <td class="tg-fymr"></td>
-                <td class="tg-0pky">neostetic</td>
-            </tr>
-            <tr>
-                <td class="tg-fymr">Nationality:</td>
-                <td class="tg-0pky">Czech Republic</td>
-            </tr>
-            <tr>
-                <td class="tg-fymr">E-mail:</td>
-                <td class="tg-0pky">
-                    <a href="mailto:gg.polacek@gmail.com">
-                        gg.polacek@gmail.com <i class="fas fa-paper-plane"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="tg-fymr">Web:</td>
-                <td class="tg-0pky">
-                    <a href="neostetic.github.io" target="_blank">
-                        neostetic.github.io <i class="fas fa-globe"></i>
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <div class="popup-links noselect">
-            <a href="https://www.facebook.com/honza.polacek.1/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://github.com/neostetic/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://dribbble.com/neostetic" target="_blank"><i class="fas fa-basketball-ball"></i></a>
-            <a href="https://twitter.com/neostetic" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/honzikalejinej/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:gg.polacek@gmail.com"><i class="fas fa-at"></i></a>
-        </div>
-    </div>
-</div>
-<script src="res/js/main.js"></script>
+<div class="footer nocopy">&copy; 2021 Jan Poláček</div>
+<script src="script/main-js.js"></script>
 </body>
 </html>
