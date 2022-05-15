@@ -2,218 +2,260 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>neostetic</title>
-    <link rel="stylesheet" href="res/css/error.css">
-    <link rel="stylesheet" href="res/css/main.css">
-    <link rel="stylesheet" href="res/css/github.css">
-    <link rel="stylesheet" href="res/css/popup.css">
-    <script src="https://kit.fontawesome.com/631210626b.js" crossorigin="anonymous"></script>
-    <!--
-           _             ____        __                __
-          (_)___ _____  / __ \____  / /___ _________  / /__
-         / / __ `/ __ \/ /_/ / __ \/ / __ `/ ___/ _ \/ //_/
-        / / /_/ / / / / ____/ /_/ / / /_/ / /__/  __/ ,<
-    __/ /\__,_/_/ /_/_/    \____/_/\__,_/\___/\___/_/|_|
-  /___/
- 
-            © 2021 - Jan Polacek (neostetic)
--->
+    <title>NEOSTETIC</title>
+    <link rel="stylesheet" href="res/style/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div id="errorMessage">
-    <div class="center">
-        Please note, that this page is being redesigned!<br>
-        <br>
-        <a id="errorClick">Okay, I understand!</a>
+<div id="loader" class="center-flex">
+    <div class="loader1 center-flex">
+        <div class="loader2"></div>
     </div>
 </div>
-<div class="header noselect">
-    <div class="header-left fl">
-        <a href="https://neostetic.github.io">NEOSTETIC</a>
-    </div>
-    <div class="header-center fl">
-        <a href="#home" onclick="setMain('a-home')" id="a-home" class="onpage">HOME</a>
-        <a href="#github" onclick="setMain('a-github')" id="a-github">GITHUB</a>
-        <a href="#projects" onclick="setMain('a-projects')" id="a-projects">PROJECTS</a>
-        <a href="#school" onclick="setMain('a-school')" id="a-school">SCHOOL</a>
-    </div>
-    <div class="header-right fl">
-        <a id="about-click" href="#about">CONTACT</a>
-    </div>
-</div>
-<div class="container color1" id="home">
-    <div class="center title-text auto-width fl">
-        <span>I'M</span><br>
-        <a href="https://dribbble.com/neostetic" target="_blank" id="icon-d"><i class="fas fa-pencil-ruler"></i></a><br>
-        <a href="https://soundcloud.com/overyoghurth" target="_blank" id="icon-m"><i class="fas fa-music"></i></a><br>
-        <a href="https://github.com/neostetic" target="_blank" id="icon-w"><i class="fas fa-file-code"></i></a><br>
-        <span>and more</span>
-    </div>
-    <div class="center clicktr noselect auto-width fr">
-        <img src="res/assets/avatar.png" class="foreground fr"/>
-    </div>
-    <div class="footer">
-        <a href="#github" onclick="setMain('a-github')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
-</div>
-<div class="container color2" id="github">
-    <div class="footer">
-        <div class="center">
-            <div class="github auto-width noselect">
-                <div class="gh-avatar fl">
-                    <img src="https://avatars.githubusercontent.com/u/83291717?v=4" class="gh-avatar-img"/>
-                    <div class="gh-avatar-name">
-                        <span class="gh-avatar-name-header">Jan Polacek</span><br>
-                        <span class="gh-avatar-name-user">neostetic</span>
-                    </div>
+<div id="container">
+    <div class="header">
+        <div class="header-left">
+            <img src="https://avatars.githubusercontent.com/u/83291717?v=4" width="30"/>
+            <a href="/" class="header-title">neostetic</a>
+            <a href="mailto:gg.polacek@gmail.com">gg.polacek@gmail.com</a>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/neostetic" target="_blank">Works</a>
+            <a href="https://www.instagram.com/honzikalejinej/" target="_blank">Contact</a>
+            <a>
+                <div class="header-button" id="button">
+                    Hire Me
                 </div>
-                <div class="gh-pins fl">
-                    <span class="gh-pins-text ">Pinned</span>
-                    <div class="gh-pins-pin">
-                        <div class="gh-pins-pin-header">
-                            <div class="gh-pins-pin-header-half fl">
-                                <i class="far fa-bookmark"></i> <a href="https://github.com/neostetic/School-Zapisky" target="_blank">School-Zapisky</a>
-                            </div>
-                            <div class="gh-pins-pin-header-half fr">
-                                <span>Public</span>
-                            </div>
-                        </div>
-                        Zápisy ze Školy xdxd
-                    </div>
-                    <div class="gh-pins-pin">
-                        <div class="gh-pins-pin-header">
-                            <div class="gh-pins-pin-header-half fl">
-                                <i class="far fa-bookmark"></i>
-                                <a href="https://github.com/cookieclicker98/cookieclicker98.github.io" target="_blank">cookieclicker98/<b>cookieclicker98.github.io</b></a>
-                            </div>
-                            <div class="gh-pins-pin-header-half fr">
-                                <span>Public</span>
-                            </div>
-                        </div>
-                        Cookie Clicker in style of 90's Windows 98's look
-                    </div>
-                    <div class="gh-pins-pin">
-                        <div class="gh-pins-pin-header">
-                            <div class="gh-pins-pin-header-half fl">
-                                <i class="far fa-bookmark"></i> <a href="https://github.com/machinegunfly/machinegunfly.github.io" target="_blank">machinegunfly/<b>machinegunfly.github.io</b></a>
-                            </div>
-                            <div class="gh-pins-pin-header-half fr">
-                                <span>Public</span>
-                            </div>
-                        </div>
-                        Show-Off website for Clients<br>
-                        <br>
-                        <div class="gh-pins-pin-css fl"></div> CSS
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/neostetic" target="_blank">
-                <button class="button">VISIT GITHUB</button>
             </a>
         </div>
-        <a href="#projects" onclick="setMain('a-projects')">
-            <i class="fas fa-caret-down"></i>
-        </a>
+    </div>
+    <div class="content center-element">
+        <h1>Find out, what <span>I do</span></h1>
+        <div class="grid">
+            <div class="grid-a center-flex" id="grid1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M318.4 304.5c-3.531 9.344-12.47 15.52-22.45 15.52h-105l45.15 94.82c9.496 19.94 1.031 43.8-18.91 53.31c-19.95 9.504-43.82 1.035-53.32-18.91L117.3 351.3l-75 88.25c-4.641 5.469-11.37 8.453-18.28 8.453c-2.781 0-5.578-.4844-8.281-1.469C6.281 443.1 0 434.1 0 423.1V56.02c0-9.438 5.531-18.03 14.12-21.91C22.75 30.26 32.83 31.77 39.87 37.99l271.1 240C319.4 284.6 321.1 295.1 318.4 304.5z"/></svg>
+                UI, UX
+            </div>
+            <div class="grid-b center-flex" id="grid2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M414.8 40.79L286.8 488.8C281.9 505.8 264.2 515.6 247.2 510.8C230.2 505.9 220.4 488.2 225.2 471.2L353.2 23.21C358.1 6.216 375.8-3.624 392.8 1.232C409.8 6.087 419.6 23.8 414.8 40.79H414.8zM518.6 121.4L630.6 233.4C643.1 245.9 643.1 266.1 630.6 278.6L518.6 390.6C506.1 403.1 485.9 403.1 473.4 390.6C460.9 378.1 460.9 357.9 473.4 345.4L562.7 256L473.4 166.6C460.9 154.1 460.9 133.9 473.4 121.4C485.9 108.9 506.1 108.9 518.6 121.4V121.4zM166.6 166.6L77.25 256L166.6 345.4C179.1 357.9 179.1 378.1 166.6 390.6C154.1 403.1 133.9 403.1 121.4 390.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4L121.4 121.4C133.9 108.9 154.1 108.9 166.6 121.4C179.1 133.9 179.1 154.1 166.6 166.6V166.6z"/></svg>
+                Developer
+            </div>
+            <div class="grid-c center-flex" id="grid3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M128 96h384v256h64V80C576 53.63 554.4 32 528 32h-416C85.63 32 64 53.63 64 80V352h64V96zM624 384h-608C7.25 384 0 391.3 0 400V416c0 35.25 28.75 64 64 64h512c35.25 0 64-28.75 64-64v-16C640 391.3 632.8 384 624 384zM365.9 286.2C369.8 290.1 374.9 292 380 292s10.23-1.938 14.14-5.844l48-48c7.812-7.813 7.812-20.5 0-28.31l-48-48c-7.812-7.813-20.47-7.813-28.28 0c-7.812 7.813-7.812 20.5 0 28.31l33.86 33.84l-33.86 33.84C358 265.7 358 278.4 365.9 286.2zM274.1 161.9c-7.812-7.813-20.47-7.813-28.28 0l-48 48c-7.812 7.813-7.812 20.5 0 28.31l48 48C249.8 290.1 254.9 292 260 292s10.23-1.938 14.14-5.844c7.812-7.813 7.812-20.5 0-28.31L240.3 224l33.86-33.84C281.1 182.4 281.1 169.7 274.1 161.9z"/></svg>
+                Websites
+            </div>
+            <div class="grid-d center-flex" id="grid4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>
+                Graphics, Logos
+            </div>
+            <div class="grid-e center-flex" id="grid5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M156.6 384.9L125.7 353.1C117.2 345.5 114.2 333.1 117.1 321.8C120.1 312.9 124.1 301.3 129.8 288H24C15.38 288 7.414 283.4 3.146 275.9C-1.123 268.4-1.042 259.2 3.357 251.8L55.83 163.3C68.79 141.4 92.33 127.1 117.8 127.1H200C202.4 124 204.8 120.3 207.2 116.7C289.1-4.07 411.1-8.142 483.9 5.275C495.6 7.414 504.6 16.43 506.7 28.06C520.1 100.9 516.1 222.9 395.3 304.8C391.8 307.2 387.1 309.6 384 311.1V394.2C384 419.7 370.6 443.2 348.7 456.2L260.2 508.6C252.8 513 243.6 513.1 236.1 508.9C228.6 504.6 224 496.6 224 488V380.8C209.9 385.6 197.6 389.7 188.3 392.7C177.1 396.3 164.9 393.2 156.6 384.9V384.9zM384 167.1C406.1 167.1 424 150.1 424 127.1C424 105.9 406.1 87.1 384 87.1C361.9 87.1 344 105.9 344 127.1C344 150.1 361.9 167.1 384 167.1z"/></svg>
+                Games
+            </div>
+            <div class="grid-f center-flex" id="grid6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M432 64H208C199.2 64 192 71.16 192 80V96H128V80C128 35.82 163.8 0 208 0H432C476.2 0 512 35.82 512 80V304C512 348.2 476.2 384 432 384H416V320H432C440.8 320 448 312.8 448 304V80C448 71.16 440.8 64 432 64zM0 192C0 156.7 28.65 128 64 128H320C355.3 128 384 156.7 384 192V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V192zM96 256H288C305.7 256 320 241.7 320 224C320 206.3 305.7 192 288 192H96C78.33 192 64 206.3 64 224C64 241.7 78.33 256 96 256z"/></svg>
+                Applications
+            </div>
+        </div>
+        <a href="https://www.linkedin.com/in/jan-poláček-47768a236/" target="_blank">LinkedIn</a>
+        <a href="https://dribbble.com/neostetic/" target="_blank">Dribbble</a>
+        <a href="https://twitter.com/neostetic" target="_blank">Twitter</a>
     </div>
 </div>
-<div class="container color3" id="projects">
-    <div class="center auto-width">
-        <div class="projects-container">
-            <h1>PROJECTS:</h1>
-            <a href="work/aquaz">TEAM AQUAZ</a><br>
-            <a href="work/over-yoghurt">OVER YOGHURT</a><br>
-            <a href="work/quil">TEAM QUIL</a><br>
-            <a href="work/lowpulse">TEAM LOWPULSE</a><br>
-            <a href="work/pbp-holder">PBP-HOLDER.cz</a><br>
-            <a href="work/machinegunfly">MACHINE GUN FLY</a><br>
-            <a href="work/cookieclicker98">COOKIECLICKER98</a><br>
+<div class="window" id="window">
+    <div class="window-x" id="window-x"></div>
+    <span id="span1">
+        <h1>UI, UX</h1>
+        <p>
+            While developing a website for a customer, User Interface is a priority.<br>
+            When a user visits your site, the site shouldn't be too distracting or disorienting. <br>
+            Keeping the interface as minimalistic as needed is the main goto for a successful site.<br>
+            <br>
+            <a class="window-button" href="https://dribbble.com/neostetic" target="_blank">Visit my Dribbble</a>
+        </p>
+        <br>
+        <b>Skills:</b><br>
+        <div class="skill">Adobe Illustrator</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Figma</div>
+        <div class="skill">Tailwind CSS</div>
+    </span>
+    <span id="span2">
+        <h1>Developer</h1>
+        <p>
+            Mainly Fullstack HTML/CSS/JS developer but started programming from basic Java and C.<br>
+            Later switched to Node.js/React, for easier Frontend and Backend development.<br>
+            Looking forward if somebody needs some algorithm done or just needs some help with programming.<br>
+            Programmer since 2019.
+            <br><br>
+            <a class="window-button" href="https://github.com/neostetic" target="_blank">Visit my Github</a>
+        </p>
+        <br>
+        <b>Skills:</b><br>
+        <div class="skill">C</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Electron</div>
+        <div class="skill">HTML</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">Unity</div>
+        <div class="skill">Pug</div>
+    </span>
+    <span id="span3">
+        <h1>Websites</h1>
+        <p>
+            While constructing a website, main goal is to use UI and UX to our advantage.<br>
+            Building and designing websites since 2019, mostly using IDEs like Webstorm or Visual Studio Code.<br>
+            Recently switched to Node.js development due to easier Fullstack development.<br>
+            <br><br>
+            <a class="window-button" href="https://github.com/neostetic" target="_blank">Visit my Github</a>
+        </p>
+        <br>
+        <b>Skills:</b><br>
+        <div class="skill">CSS</div>
+        <div class="skill">Electron</div>
+        <div class="skill">HTML</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">Pug</div>
+        <br>
+        <br>
+        <b>Works:</b><br>
+        <ul>
+            <li><a class="window-a" href="https://neostetic.github.io/Linux-Shells/" target="_blank">Linux Shells [CZE]</a></li>
+            <li><a class="window-a" href="https://neostetic.github.io/Tailwind-UI-Website/" target="_blank">Tailwind UI [CZE]</a></li>
+            <li><a class="window-a" href="https://pbp-holder.cz" target="_blank">PBP-Holder.cz</a></li>
+            <li><a class="window-a" href="https://machinegunfly.github.io" target="_blank">machinegunfly</a></li>
+        </ul>
+        <a href="https://pbp-holder.cz" target="_blank">
+            <img class="window-img" src="res/assets/work-web-1.png"/>
+        </a>
+    </span>
+    <span id="span4">
+        <h1>Graphics, Logos</h1>
+        <p>
+            While creating a team/company, you need to be seen.<br>
+            Via Colors or Logos in general makes a brand noticeable and recognizable.<br>
+            Creating Logos and Design since 2017, using mainly Photoshop, Illustrator and After Effects.<br>
+            <br><br>
+            <a class="window-button" href="https://dribbble.com/neostetic" target="_blank">Visit my Dribbble</a>
+        </p>
+        <br>
+        <b>Skills:</b><br>
+        <div class="skill">Adobe After Effects</div>
+        <div class="skill">Adobe Illustrator</div>
+        <div class="skill">Adobe Photoshop</div>
+        <br>
+        <br>
+        <b>Works:</b><br>
+        <ul>
+            <li><a class="window-a" href="https://dribbble.com/shots/15207310-bolt-design" target="_blank">LowPulse Logo</a></li>
+            <li><a class="window-a" href="https://dribbble.com/shots/15035503-rustid-crew" target="_blank">RustidCrew Logo</a></li>
+            <li><a class="window-a" href="https://dribbble.com/shots/14974444-water-logo" target="_blank">Aquaz eSport Team Logo</a></li>
+            <li><a class="window-a" href="https://dribbble.com/shots/14924287-bear-vector-logo" target="_blank">Quil Logo</a></li>
+        </ul>
+        <img class="window-img" src="res/assets/work-graphic-1.png"/>
+    </span>
+    <span id="span5">
+        <h1>Games</h1>
+        <p>
+            Fun little projects, where you can enjoy bits of your time.<br>
+            <br><br>
+            <a class="window-button" href="https://github.com/neostetic" target="_blank">Visit my Github</a>
+        </p>
+        <br>
+        <b>Skills:</b><br>
+        <div class="skill">Adobe After Effects</div>
+        <div class="skill">Adobe Illustrator</div>
+        <div class="skill">Adobe Photoshop</div>
+        <div class="skill">C</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Electron</div>
+        <div class="skill">HTML</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">Unity</div>
+        <div class="skill">Pug</div>
+        <br>
+        <br>
+        <b>Works:</b><br>
+        <ul>
+            <li><a class="window-a" href="https://robuxroll.github.io" target="_blank">RobuxRoll</a></li>
+            <li><a class="window-a" href="https://cookieclicker98.github.io" target="_blank">Cookieclicker98</a></li>
+            <li><a class="window-a" href="https://github.com/neostetic/project" target="_blank">Just Bunker (Java)</a></li>
+        </ul>
+        <br>
+        <a href="https://robuxroll.github.io/" target="_blank">
+            <img class="window-img" src="res/assets/work-game-1.png"/>
+        </a>
+    </span>
+    <span id="span6">
+        <h1>Applications</h1>
+        <p>
+            Fun little projects to improve my coding skills.<br>
+            <br><br>
+            <a class="window-button" href="https://github.com/neostetic" target="_blank">Visit my Github</a>
+        </p>
+        <br>
+        <b>Skills:</b><br>
+        <div class="skill">Adobe After Effects</div>
+        <div class="skill">Adobe Illustrator</div>
+        <div class="skill">Adobe Photoshop</div>
+        <div class="skill">C</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Electron</div>
+        <div class="skill">HTML</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">React</div>
+        <div class="skill">Unity</div>
+        <div class="skill">Pug</div>
+        <br>
+        <br>
+        <b>Works:</b><br>
+        <ul>
+            <li><a class="window-a" href="https://zenith-airy-cabinet.glitch.me" target="_blank">Chat App/Web</a></li>
+            <li><a class="window-a" href="https://stripe-thread-feet.glitch.me" target="_blank">Translator</a></li>
+        </ul>
+        <br>
+        <a href="https://zenith-airy-cabinet.glitch.me" target="_blank">
+            <img class="window-img" src="res/assets/work-app-1.png"/>
+        </a>
+    </span>
+</div>
+<div class="hire" id="hire">
+    <div class="hire-closer" id="hireCloser"></div>
+    <div class="hire-div" id="hireDiv">
+        <div class="hire-x" id="hire-x"></div>
+        <h1>Send request via form</h1>
+        <form method="post" action="res/script/main.php">
+            <table>
+                <tr>
+                    <td>Your name:</td>
+                    <td><input class="hire-input" required maxlength="64" type="text" name="name" placeholder="František Kočí"></td>
+                </tr>
+                <tr>
+                    <td>Your mail:</td>
+                    <td><input class="hire-input" required type="email" name="email" placeholder="example@mail.com"></td>
+                </tr>
+                <tr>
+                    <td>Your message:</td>
+                    <td><textarea class="hire-textarea" required maxlength="2000" name="msg" placeholder="Describe what you need or want..."></textarea></td>
+                </tr>
+            </table>
+            <button class="button" type="submit" name="sending_email_btn">Send</button>
+        </form>
+        <div class="hire-shh">
+            *Request form sends mail to "gg.polacek@mgail.com". Then I'll try contacting you soon as possible.
         </div>
     </div>
-    <div class="footer">
-        <a href="#school" onclick="setMain('a-school')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
 </div>
-<div class="container color4" id="school">
-    <div class="center auto-width">
-        <div class="school-container">
-            <b>School Zápisky</b>
-            <ul>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/CIT">💯 Číslicová Technika (CIT)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/DBA">📂 Databzové Systémy (DBA)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/OPS">📴 Operační Systémy (OPS)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/blob/main/PRO/README.md">💾 Programování (PRO)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/SIT">🔌 Počítačové Sítě (SIT)</a></li>
-                <li><a href="https://github.com/neostetic/School-Zapisky/tree/main/WAP">🌐 Webové Aplikace (WAP)</a></li>
-            </ul>
-            <b>Učitelé na Github</b>
-            <ul>
-                <li><a href="https://github.com/honziktillu">Jan Till</a></li>
-                <li><a href="https://github.com/LukasMazl">Lukáš Mázl</a></li>
-                <li><a href="https://github.com/KRBNJSF">🤡</a></li>
-            </ul>
-            <b>SPSMB Group</b>
-            <ul>
-                <li><a href="https://github.com/SPSMB">Group</a></li>
-            </ul>
-            <p align="right">
-                <a href="https://github.com/neostetic">Go Home</a>
-            </p>
-        </div>
-    </div>
-    <div class="footer">
-        <a href="#home" onclick="setMain('a-home')">
-            <i class="fas fa-caret-down"></i>
-        </a>
-    </div>
-</div>
-<div id="about-popup" class="popup center">
-    <div class="popup-x noselect"><span class="button-x" id="about-popup-x">X</span></div>
-    <div class="popup-content" align="center">
-        <h2>CONTACT:</h2>
-        <table>
-            <tr>
-                <td class="tg-fymr">Name:</td>
-                <td class="tg-0pky">Jan Poláček</td>
-            </tr>
-            <tr>
-                <td class="tg-fymr"></td>
-                <td class="tg-0pky">neostetic</td>
-            </tr>
-            <tr>
-                <td class="tg-fymr">Nationality:</td>
-                <td class="tg-0pky">Czech Republic</td>
-            </tr>
-            <tr>
-                <td class="tg-fymr">E-mail:</td>
-                <td class="tg-0pky">
-                    <a href="mailto:gg.polacek@gmail.com">
-                        gg.polacek@gmail.com <i class="fas fa-paper-plane"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="tg-fymr">Web:</td>
-                <td class="tg-0pky">
-                    <a href="neostetic.github.io" target="_blank">
-                        neostetic.github.io <i class="fas fa-globe"></i>
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <div class="popup-links noselect">
-            <a href="https://www.facebook.com/honza.polacek.1/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://github.com/neostetic/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://dribbble.com/neostetic" target="_blank"><i class="fas fa-basketball-ball"></i></a>
-            <a href="https://twitter.com/neostetic" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/honzikalejinej/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:gg.polacek@gmail.com"><i class="fas fa-at"></i></a>
-        </div>
-    </div>
-</div>
-<script src="res/js/main.js"></script>
+<script src="res/script/main.js"></script>
 </body>
 </html>
