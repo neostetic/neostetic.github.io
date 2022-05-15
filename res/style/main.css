@@ -493,9 +493,13 @@ td {
 }
 
 @media screen and (max-width: 1080px) {
+    .header {
+        padding: 10px;
+    }
     .content {
         width: 100%;
         padding: 20px;
+        z-index: -1;
     }
 
     .window {
@@ -520,10 +524,12 @@ td {
         padding: 0;
         color: #5bffae;
         transition: .2s;
+        box-shadow: none;
     }
 
     .header-button:hover {
         opacity: .7;
+        box-shadow: none;
     }
 
     .header-right > a {
