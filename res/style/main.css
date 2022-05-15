@@ -22,8 +22,6 @@
 
 *::-webkit-scrollbar-track {
     background: transparent;
-    margin: 10px;
-    padding: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -298,6 +296,7 @@ h1 > span {
 }
 
 .window {
+    transform: scale(.4);
     display: none;
     overflow: auto;
     top: 300%;
@@ -313,7 +312,6 @@ h1 > span {
     padding: 50px;
     color: white;
     transition: .5s ease-in-out;
-    transform: scale(1);
 }
 
 .window-x, .hire-x {
@@ -361,17 +359,22 @@ h1 > span {
     transform: rotate(90deg);
 }
 
+.skills {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
 .skill {
     color: #5bffae;
     background: rgba(91,255,174,.2);
     border: 1px solid #5bffae;
     width: auto;
     border-radius: 20px;
-    float: left;
     padding: 1px 12px;
     position: relative;
     top: 2px;
     margin-right: 5px;
+    margin-bottom: 5px;
     font-size: 12px;
 }
 
@@ -459,6 +462,15 @@ table, tr {
 
 td {
     width: 50%;
+}
+
+iframe {
+    position: absolute;
+    overflow: auto;
+    height: calc(100% - 90px);
+    width: calc(100% - 80px);
+    border: none;
+    z-index: -1;
 }
 
 .hire-input, .hire-textarea {
