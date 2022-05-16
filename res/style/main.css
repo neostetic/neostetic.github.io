@@ -437,6 +437,7 @@ pre {
 }
 
 .hire-div {
+    overflow: hidden;
     position: absolute;
     right: -100%;
     width: 500px;
@@ -520,6 +521,17 @@ iframe {
 
 .imgLink:hover {
     transform: scale(1);
+}
+
+.cross-line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(36deg);
+    box-shadow: 0 5px 50px rgba(0,0,0,.8);
+    position: absolute;
+    width: 600%;
+    height: 40px;
+    background: url("../assets/corss-line.png");
 }
 
 @media screen and (max-width: 1080px) {
