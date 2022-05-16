@@ -532,6 +532,36 @@ iframe {
     width: 600%;
     height: 40px;
     background: url("../assets/corss-line.png");
+    animation: crossing infinite 30s linear;
+}
+
+@keyframes crossing {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: 100%;
+    }
+
+}
+
+.cross-line-bubble {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(0,0,0,.8);
+    font-weight: 600;
+    padding: 30px;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    z-index: 99;
+    color: black;
+}
+
+.cross-line-bubble > a {
+    color: black;
 }
 
 @media screen and (max-width: 1080px) {
