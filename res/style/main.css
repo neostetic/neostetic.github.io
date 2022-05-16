@@ -504,6 +504,24 @@ iframe {
     margin-top: 30px;
 }
 
+.stats {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgLink {
+    border-radius: 10px;
+    transition: .2s;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transform: scale(.98);
+}
+
+.imgLink:hover {
+    transform: scale(1);
+}
+
 @media screen and (max-width: 1080px) {
     .header {
         padding: 10px;
@@ -519,6 +537,14 @@ iframe {
         width: 100vw;
         margin: 0;
         border-radius: 0;
+    }
+
+    .stats > div >  img {
+        width: 100%;
+    }
+
+    .imgLink {
+        width: 100%;
     }
 }
 
