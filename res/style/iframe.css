@@ -3,3 +3,50 @@ body {
     color: white;
     overflow: auto;
 }
+
+.iframe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.iframe-grid-child {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: rgba(255,255,255,.05);
+    padding: 0px;
+    border-radius: 10px;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.iframe-grid-child:hover {
+    transform: scale(1.01);
+    border-radius: 14px;
+}
+
+.iframe-grid-child > img {
+    width: 100%;
+}
+
+.iframe-grid-child > div {
+    padding: 10px;
+    font-size: 12px;
+    text-align: justify;
+    height: 130px;
+}
+
+.iframe-grid-child > div > span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.iframe-grid-child > a {
+    padding: 10px;
+}
+
+.iframe-grid-child > a > button {
+    width: 100%;
+}
