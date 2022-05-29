@@ -11,6 +11,7 @@ body {
 }
 
 .iframe-grid-child {
+    position: relative;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -20,11 +21,11 @@ body {
     border-radius: 10px;
     transition: .2s;
     overflow: hidden;
+    padding-bottom: 60px;
 }
 
 .iframe-grid-child:hover {
-    transform: scale(1.01);
-    border-radius: 14px;
+    border-radius: 16px;
 }
 
 .iframe-grid-child > img {
@@ -35,7 +36,6 @@ body {
     padding: 10px;
     font-size: 12px;
     text-align: justify;
-    height: 130px;
 }
 
 .iframe-grid-child > div > span {
@@ -45,8 +45,15 @@ body {
 
 .iframe-grid-child > a {
     padding: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 .iframe-grid-child > a > button {
-    width: 100%;
+    box-shadow: none;
+}
+
+.iframe-grid-child > a > button:hover {
+    transform: scale(1);
+    opacity: .5;
 }
