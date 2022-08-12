@@ -4,6 +4,10 @@ window.addEventListener("load", async () => {
     document.getElementById('loader').style.display = 'none';
 })
 
+const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 let detailsButton = document.getElementById('details-button');
 detailsButton.onclick = () => {
     let detailsText = document.getElementById('details-text');
