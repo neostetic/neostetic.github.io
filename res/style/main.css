@@ -230,6 +230,7 @@ cursive {
 
 .main-graphic-text1:after {
     animation: loading-dots 2s infinite;
+    content: "";
 }
 
 .main-graphic-text2, .main-graphic-text3 {
