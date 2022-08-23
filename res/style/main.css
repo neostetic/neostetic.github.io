@@ -228,6 +228,10 @@ cursive {
     text-align: center;
 }
 
+.main-graphic-text1:after {
+    animation: loading-dots 2s infinite;
+}
+
 .main-graphic-text2, .main-graphic-text3 {
     font-weight: 800;
     text-align: center;
@@ -452,6 +456,22 @@ cursive {
         background: -webkit-linear-gradient(var(--color3), var(--color4));
         -webkit-background-clip: text;
         -webkit-text-stroke: 4px transparent;
+    }
+}
+
+
+@keyframes loading-dots {
+    0% {
+        content: '.'
+    }
+    33% {
+        content: '..'
+    }
+    66% {
+        content: '...'
+    }
+    99% {
+        content: '.'
     }
 }
 
