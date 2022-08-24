@@ -17,7 +17,7 @@
 git clone https://github.com/neostetic/neostetic.github.io.git
 ```
 #### Legal actions
- - Please, before using or cloning this project, read our [License Terms](https://github.com/RobuxRoll/casino-dev/blob/main/LICENSE).
+ - Please, before using or cloning this project, read our [License Terms](./blob/main/LICENSE).
  - **By cloning, you are agreeing to the license and its intent.**
 
 ##### Copyright © 2022 Jan Poláček (neostetic). All rights reserved.
