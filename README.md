@@ -3,7 +3,7 @@
 ![image](https://raw.githubusercontent.com/neostetic/neostetic/main/assets/tag_javascript.png)
 ![image](https://raw.githubusercontent.com/neostetic/neostetic/main/assets/tag_css.png)
 
-![image](https://user-images.githubusercontent.com/83291717/184346731-d115fb64-b9ff-437c-9b0e-2788f82ed238.png)
+![image](https://user-images.githubusercontent.com/83291717/190916183-f20a432f-f90e-4891-bd98-6358c70b0fea.png)
 
 #### Information
  - **Name:** neostetic.github.io
