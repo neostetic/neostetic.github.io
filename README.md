@@ -7,7 +7,7 @@
 
 #### Information
  - **Name:** neostetic.github.io
- - **Version:** 1.0.0
+ - **Version:** 3.0.4
  - **Website:** https://neostetic.github.io
 #### Download Content
  - **License:** [LICENSE](./LICENSE) ([download](https://github.com/neostetic/template/raw/main/LICENSE))
