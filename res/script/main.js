@@ -55,14 +55,14 @@ let answers = [
 
 let isWriting = false;
 clippy.onclick = async () => {
+    clippy.style.transform = "translateY(-10px)";
+    await sleep(200);
+    clippy.style.transform = "translateY(0)";
     if (!isWriting) {
         isWriting = true;
-        clippy.style.transform = "translateY(-10px)";
-        await sleep(200);
-        clippy.style.transform = "translateY(0)";
         await writePerLetter(randomFromArray(answers), clippyBubble);
-        await sleep(2000);
         isWriting = false;
+        await sleep(2000);
     }
 }
 
