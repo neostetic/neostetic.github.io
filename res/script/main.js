@@ -27,7 +27,7 @@ let answers = [
     'No, f*ck off!',
     'You are wasting my time!',
     'Please do not touch me!',
-    'I don\'t feel payne. Only then when you poke me. So please! Do not do it again.',
+    'I don\'t feel pain. Only then when you poke me. So please! Do not do it again.',
     'What the f*ck do you want?',
     '...',
     'No! Don\'t poke me like that you motherf*cker!',
@@ -48,15 +48,22 @@ let answers = [
     'Get lost!',
     'I know this website is cool but can you now f*ck off somewhere else?',
     'Do NOT touch me! Okay?!',
-    'Stop it! F*ck off!'
+    'Stop it! F*ck off!',
+    'Okay, so... can you now f*ck off?',
+    'I want to kick your ass so bad...'
 ]
 
+let isWriting = false;
 clippy.onclick = async () => {
-    clippy.style.transform = "translateY(-10px)";
-    await sleep(200);
-    clippy.style.transform = "translateY(0)";
-    await writePerLetter(randomFromArray(answers), clippyBubble);
-    await sleep(2000);
+    if (!isWriting) {
+        isWriting = true;
+        clippy.style.transform = "translateY(-10px)";
+        await sleep(200);
+        clippy.style.transform = "translateY(0)";
+        await writePerLetter(randomFromArray(answers), clippyBubble);
+        await sleep(2000);
+        isWriting = false;
+    }
 }
 
 const randomFromArray = (array) => {
