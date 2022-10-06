@@ -94,7 +94,18 @@ let websites = [
     'https://neostetic.github.io/Tailwind-UI-Website/',
     'https://pbp-holder.cz',
     'https://machinegunfly.github.io',
-    'https://cookieclicker98.github.io'
+    'https://cookieclicker98.github.io',
+    './misc/css-button-transition',
+    './misc/css-purple-popup-recreation',
+    './misc/css-switch-bulb',
+    './mist/css-translator-design',
+    './mist/css-vaporwave-background',
+    './mist/css-windows-popup-website',
+    './mist/incomplete-color-game',
+    './mist/incomplete-linux-website',
+    './mist/incomplete-oldskool-website',
+    './mist/web-outdated-personal',
+    './mist/web-outdated-school-project'
 ]
 document.getElementById('button1').onclick = () => {location.href = '#projects'};
 document.getElementById('button2').onclick = () => {location.href = '#about'};

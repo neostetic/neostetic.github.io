@@ -1,0 +1,265 @@
+/*
+       _             ____        __                __
+      (_)___ _____  / __ \____  / /___ _________  / /__
+     / / __ `/ __ \/ /_/ / __ \/ / __ `/ ___/ _ \/ //_/
+    / / /_/ / / / / ____/ /_/ / / /_/ / /__/  __/ ,<
+ __/ /\__,_/_/ /_/_/    \____/_/\__,_/\___/\___/_/|_|
+/___/
+
+           © 2021 - Jan Polacek (neostetic)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --color: 258; /* Default: 258 */
+    --body-background: hsl(var(--color), 35%, 25%);
+    --popup-title-first: hsl(var(--color), 68%, 13%);
+    --popup-title-second: hsl(var(--color), 55%, 34%);
+    --popup-title-angle: 90deg;
+    --popup-color: #c3c2c7;
+    --button-color: #525254;
+    --border-color-top: #e9e8ee;
+    --border-color-bottom: #9a999d;
+    --transition: 0s;
+}
+
+::-moz-selection {
+    background: var(--popup-title-first);
+    color: var(--popup-color);
+}
+
+::selection {
+    background: var(--popup-title-first);
+    color: var(--popup-color);
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--body-background);
+    font-family: 'Fira Mono', monospace;
+    transition: var(--transition);
+}
+
+button {
+    text-align: center;
+    color: var(--button-color);
+    text-shadow: 1px 1px var(--border-color-top);
+    float: right;
+    background: var(--popup-color);
+    font-weight: 500;
+    padding: 2px;
+    width: 80px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-family: 'Fira Mono', monospace;
+}
+
+button:active {
+    border-bottom: 2px solid var(--border-color-top);
+    border-right: 2px solid var(--border-color-top);
+    border-top: 2px solid var(--border-color-bottom);
+    border-left: 2px solid var(--border-color-bottom);
+    color: var(--border-color-top);
+    text-shadow: 1px 1px var(--border-color-bottom);
+}
+
+button:active > .popup-title-button-window-icon {
+    border: 1px solid var(--border-color-top);
+    border-top: 3px solid var(--border-color-top);
+    box-shadow: 1px 1px var(--border-color-bottom);
+}
+
+i {
+    margin-left: 5px;
+}
+
+#container, .popup {
+    top: 0;
+    left: 0;
+    margin: 20px;
+    position: relative;
+    width: 360px;
+    background: var(--popup-color);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, .5);
+    transition: .1s cubic-bezier(1, 0.18, 0.6, 1.65);
+    animation: transition 2s cubic-bezier(1, 0.18, 0.6, 1.65);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    float: left;
+}
+
+.nocopy {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.border {
+    border-top: 2px solid var(--border-color-top);
+    border-left: 2px solid var(--border-color-top);
+    border-bottom: 2px solid var(--border-color-bottom);
+    border-right: 2px solid var(--border-color-bottom);
+}
+
+.popup-title {
+    float: left;
+    width: 100%;
+    background: var(--popup-title-first);
+    background: -moz-linear-gradient(var(--popup-title-angle), var(--popup-title-first) 0%, var(--popup-title-second) 100%);
+    background: -webkit-linear-gradient(var(--popup-title-angle), var(--popup-title-first) 0%, var(--popup-title-second) 100%);
+    background: linear-gradient(var(--popup-title-angle), var(--popup-title-first) 0%, var(--popup-title-second) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--popup-title-first), endColorstr=var(--popup-title-second), GradientType=1);
+    padding: 3px;
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.popup-title-button, .popup-title-button-window {
+    width: 24px;
+    margin-left: 3px;
+    padding: 0 2px 2px 2px;
+}
+
+.popup-title-button-window {
+    padding: 3px 4px;
+}
+
+.popup-title-button-window-icon {
+    border: 1px solid var(--button-color);
+    border-top: 3px solid var(--button-color);
+    box-shadow: 1px 1px var(--border-color-top);
+    width: 12px;
+    height: 12px;
+}
+
+.popup-content {
+    font-size: 10px;
+    padding: 50px 30px 30px 30px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px;
+    opacity: .4;
+}
+
+.inner-href {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.inner-smile:after {
+    content: ':)';
+}
+
+.inner-smile:hover::after{
+    content: ':O';
+}
+
+.inner-dot {
+    position: relative;
+    animation: dotdotdot 3s linear infinite;
+}
+
+.inner-input {
+    border: 0;
+    background: transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Fira Mono', monospace;
+
+}
+
+@keyframes dotdotdot {
+    0% {
+        padding-left: 0px;
+    }
+    50% {
+        padding-left: 8px;
+    }
+    100% {
+        padding-left: 0px;
+    }
+}
+
+@keyframes transition {
+    0% {
+        transform: scale(.3);
+        left: -7px;
+    }
+    5% {
+        left: 6px;
+    }
+    10% {
+        transform: scale(1);
+        left: -5px;
+    }
+    15% {
+        left: 4px;
+    }
+    20% {
+        left: -3px;
+    }
+    25% {
+        left: 2px;
+    }
+    30% {
+        left: -1px;
+    }
+    35% {
+        left: 0;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(.3);
+        left: -7px;
+    }
+    5% {
+        left: 6px;
+    }
+    10% {
+        transform: scale(1);
+        left: -5px;
+    }
+    15% {
+        left: 4px;
+    }
+    20% {
+        left: -3px;
+    }
+    25% {
+        left: 2px;
+    }
+    30% {
+        left: -1px;
+    }
+    35% {
+        left: 0;
+    }
+}

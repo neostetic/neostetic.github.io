@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+<body onload="loader()">
+<div class="div">
+
+    <button class="button">BUTTON 1</button>
+    <button class="button reverse">BUTTON 2</button>
+    <button class="button round">BUTTON 3</button>
+    <button class="button reverse round">BUTTON 4</button><br>
+
+    <button class="button thin">BUTTON thin 1</button>
+    <button class="button thin reverse">BUTTON thin 2</button>
+    <button class="button thin round">BUTTON thin 3</button>
+    <button class="button thin  reverse round">BUTTON thin 4</button><br>
+
+    <div class="input-text">Main Color<input class="input" value="white" id="input1"/></div>
+    <div class="input-text">Secondary Color<input class="input" value="black" id="input2"/></div>
+    <div class="input-text">Animation Degrees<input class="input" value="60deg" id="input3"/></div>
+    <button class="button input-button" id="button1">PROCEED</button>
+    <script>
+        let button1 = document.getElementById("button1");
+        button1.onclick = loader;
+    </script>
+</div>
+</body>
+</html>

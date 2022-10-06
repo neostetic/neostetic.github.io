@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: "hooge 05_53", sans-serif;
+    outline: none;
+}
+
+body, html {
+    margin: 0;
+    width: 100%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.window {
+    color: #3701c8;
+    width: 1080px;
+    border-top: 5px solid #9e97c8;
+    border-left: 5px solid #9e97c8;
+    border-right: 5px solid #3701c8;
+    border-bottom: 5px solid #3701c8;
+    background: #bdbdbd;
+}
+
+.window-title-box {
+    color: white;
+    background: #e998e7;
+    padding: 4px;
+}
+
+.window-content-text {
+    padding: 160px 0 100px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.window-content-buttons {
+    padding: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.window-button {
+    color: #3701c8;
+    position: relative;
+    border: 5px solid #3701c8;
+    background: #e998e7;
+    box-shadow: inset 0 5px #bdbdbd, 0 5px rgba(0,0,0,.4);
+    font-size: 16px !important;
+    width: 240px;
+    height: 40px;
+    margin: 0 100px;
+}
+
+.window-button:active {
+    top: 5px;
+    box-shadow: none;
+}
+
+.window-button-x {
+    border-top: 5px solid #9e97c8;
+    border-left: 5px solid #9e97c8;
+    border-right: 5px solid #3701c8;
+    border-bottom: 5px solid #3701c8;
+    color: #3701c8;
+    font-size: 22px;
+    background: #7556c8;
+    float: right;
+}
+
+.window-button-x:active {
+    border-right: 5px solid #9e97c8;
+    border-bottom: 5px solid #9e97c8;
+    border-top: 5px solid #3701c8;
+    border-left: 5px solid #3701c8;
+}

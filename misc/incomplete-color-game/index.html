@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/631210626b.js" crossorigin="anonymous"></script>
+    <title>buttonTry</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        *{
+            outline: none;
+            box-sizing: border-box;
+            color: white;
+            font-family: 'Indie Flower', cursive;
+        }
+        body, html{
+            padding: 0;
+            margin: 0;
+            background: #0D0D0D;
+            width: 100%;
+            height: 100%;
+            transition:.2s ease-out;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        button{
+            padding: 18px;
+            margin: 5px 2px;
+            font-size: 24px;
+            border: 0;
+            cursor: pointer;
+            transition: .1s cubic-bezier(0.6, -0.28, 0.43, 2.24);
+            border-radius: 10px;
+            position: relative;
+        }
+        .up{
+            background: #009cff;
+            color: white;
+            box-shadow: 0 5px 0 #004e80 , 0 4px 5px rgba(0,0,0,1);
+            top: 0;
+            left: 65px;
+        }
+        .up:active{
+            top: 6px;
+            background: #0077c2;
+            color: #a7a7a7;
+            box-shadow: 0 0 0 #004e80;
+        }
+
+        .left{
+            background: #E300FF;
+            color: white;
+            box-shadow: 0 5px 0 #720080 , 0 4px 5px rgba(0,0,0,1);
+            top: 0;
+        }
+        .left:active{
+            top: 6px;
+            background: #AC00C2;
+            color: #a7a7a7;
+            box-shadow: 0 0 0 #720080;
+        }
+
+        .down{
+            background: hsl(24, 100%, 50%);
+            color: white;
+            box-shadow: 0 5px 0 hsl(24, 100%, 25%) , 0 4px 5px rgba(0,0,0,1);
+            top: 0;
+        }
+        .down:active{
+            top: 6px;
+            background: hsl(24, 100%, 25%);
+            color: #a7a7a7;
+            box-shadow: 0 0 0 hsl(24, 100%, 25%);
+        }
+
+        .right{
+            background: #1CFF00;
+            color: white;
+            box-shadow: 0 5px 0 #0E8000 , 0 4px 5px rgba(0,0,0,1);
+            top: 0;
+        }
+        .right:active{
+            top: 6px;
+            background: #16C200;
+            color: #a7a7a7;
+            box-shadow: 0 0 0 #0E8000;
+        }
+
+        .inner{
+            z-index: 2;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .pin{
+            border-radius: 50% 50% 50% 0;
+            width: 50px;
+            height: 50px;
+            transform: rotate(-45deg);
+            border: 5px solid white;
+            background: transparent;
+            color: white;
+            padding: 8px;
+            font-size: 24px;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        .arrow{
+            position: absolute;
+            bottom: 60px;
+            right: 200px;
+            transform: rotate(20deg);
+            z-index: 100;
+        }
+
+        .text{
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            bottom: 240px;
+            right: 170px;
+            width: 200px;
+            height: 20px;
+        }
+
+        #background1{
+            z-index: 1;
+            position: absolute;
+            width: 10%;
+            top: -100%;
+            height: 400%;
+            background: white;
+            animation: bg1 20s ease-in-out infinite;
+        }
+
+        @keyframes bg1 {
+            0%{
+                left: 50%;
+                transform: rotate(200deg);
+                width: 20%;
+            }
+            20%{
+                left: 40%;
+                width: 40%;
+            }
+            25%{
+                transform: rotate(150deg);
+            }
+            30%{
+                width: 20%;
+                transform: rotate(210deg);
+            }
+            34%{
+                left: 55%;
+            }
+            42%{
+                transform: rotate(160deg);
+            }
+            50%{
+                width: 30%;
+                left: 42%;
+            }
+            60%{
+                left: 50%;
+                transform: rotate(220deg);
+            }
+            65%{
+                width: 10%;
+                transform: rotate(190deg);
+            }
+            70%{
+                width: 20%;
+            }
+            75%{
+                left: 40%;
+            }
+            100%{
+                left: 50%;
+                transform: rotate(200deg);
+                width: 20%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="inner">
+        <div class="text">Press key, when Color Change</div>
+        <img class="arrow" src="_arrowNOCPY.png" height="100"/>
+        <button class="btn up" id="up"><i class="fas fa-arrow-up"></i></button><br>
+        <button class="btn left" id="left"><i class="fas fa-arrow-left"></i></button>
+        <button class="btn down" id="down"><i class="fas fa-arrow-down"></i></button>
+        <button class="btn right" id="right"><i class="fas fa-arrow-right"></i></button>
+    </div>
+<div class="pin"><i class="fas fa-arrow-up"></i></div>
+    <div id="background1"></div>
+<script>
+    let keyUp = document.getElementById("up");
+    let keyDown = document.getElementById("down");
+    let keyLeft = document.getElementById("left");
+    let keyRight = document.getElementById("right");
+    let text = document.getElementById("text");
+
+    var shadow = 0;
+    var opacity = 9;
+
+
+    var background;
+    var darker;
+    var darkest;
+
+    // step = Math.floor(Math.random() * 4);
+
+
+    function setupKey(e){
+        var keynum;
+        var pressedKey;
+
+        if(window.event) {
+            keynum = e.keyCode;
+        } else if(e.which) {
+            keynum = e.which;
+        }
+
+        if (keynum === 40) {
+            pressedKey = keyDown;
+            keyGame = 0;
+            background = "#FF6400";
+            darker = "#C24B00";
+            darkest = "#803200";
+        } else if (keynum === 39) {
+            pressedKey = keyRight;
+            keyGame = 1;
+            background = "#1CFF00";
+            darker = "#16C200";
+            darkest = "#0E8000";
+        } else if (keynum === 38) {
+            pressedKey = keyUp;
+            keyGame = 2;
+            background = "#009cff";
+            darker = "#0077c2";
+            darkest = "#004E80";
+        } else if (keynum === 37) {
+            pressedKey = keyLeft;
+            keyGame = 3;
+            background = "#E300FF";
+            darker = "#AC00C2";
+            darkest = "#720080";
+        }
+        pressedKey.style.top = "6px";
+        pressedKey.style.background = darker;
+        pressedKey.style.color = "#a7a7a7";
+        pressedKey.style.boxShadow =  "0 0px 0 "+darkest;
+    }
+
+    function resetKey(e){
+        var keynum;
+        var pressedKey;
+
+        if(window.event) {
+            keynum = e.keyCode;
+        } else if(e.which) {
+            keynum = e.which;
+        }
+
+        if (keynum === 40) {
+            pressedKey = keyDown;
+            background = "#FF6400";
+            darker = "#C24B00";
+            darkest = "#803200";
+        } else if (keynum === 39) {
+            pressedKey = keyRight;
+            background = "#1CFF00";
+            darker = "#16C200";
+            darkest = "#0E8000";
+        } else if (keynum === 38) {
+            pressedKey = keyUp;
+            background = "#009cff";
+            darker = "#0077c2";
+            darkest = "#004E80";
+        } else if (keynum === 37) {
+            pressedKey = keyLeft;
+            background = "#E300FF";
+            darker = "#AC00C2";
+            darkest = "#720080";
+        }
+        pressedKey.style.top = "0";
+        pressedKey.style.background = background;
+        pressedKey.style.color = "white";
+        pressedKey.style.boxShadow =  "0 5px 0 "+darkest+" , 0 4px 5px rgba(0,0,0,1)";
+    }
+</script>
+</body>
+</html>
