@@ -95,6 +95,7 @@ let websites = [
     'https://pbp-holder.cz',
     'https://machinegunfly.github.io',
     'https://cookieclicker98.github.io',
+    './misc/fun-falling-asian-gay-man',
     './misc/css-button-transition',
     './misc/css-purple-popup-recreation',
     './misc/css-switch-bulb',
