@@ -62,11 +62,12 @@
         await onLoad();
     }
 
+    let gifSrc = "gif.gif";
     let animations = ["falling1", "falling2", "falling3"]
 
     const createGif = async () => {
         const newGif = document.createElement("img");
-        newGif.src = "gif.gif";
+        newGif.src = randFromArray(gifSrc);
         newGif.classList.add('gifAnimated');
         newGif.style.left = randMinMax(0, 100) + "%";
         let time = randMinMax(4, 12);
