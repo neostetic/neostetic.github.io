@@ -111,7 +111,7 @@ let websites = [
 document.getElementById('button1').onclick = () => {location.href = '#projects'};
 document.getElementById('button2').onclick = () => {location.href = '#about'};
 document.getElementById('button3').onclick = () => {location.href = '#contact'};
-document.getElementById('button4').onclick = () => {location.href = randomFromArray(websites), '_blank'};
+document.getElementById('button4').onclick = () => {window.open(randomFromArray(websites), '_blank')};
 
 const createRandomElement = async () => {
     const element = document.createElement("img");
