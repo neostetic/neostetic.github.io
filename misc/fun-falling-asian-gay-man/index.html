@@ -67,7 +67,7 @@
 
     const createGif = async () => {
         const newGif = document.createElement("img");
-        newGif.src = randFromArray(gifSrc);
+        newGif.src = gifSrc;
         newGif.classList.add('gifAnimated');
         newGif.style.left = randMinMax(0, 100) + "%";
         let time = randMinMax(4, 12);
