@@ -57,7 +57,7 @@
 <img class="gifAnimated" src="gif.gif" height="128"/>
 <script>
     const onLoad = async () => {
-        await createGif();
+        createGif();
         await sleep(randMinMax(300,1000));
         await onLoad();
     }
@@ -69,10 +69,12 @@
         newGif.src = "gif.gif";
         newGif.classList.add('gifAnimated');
         newGif.style.left = randMinMax(0, 100) + "%";
-        console.log(randFromArray(animations) + " " + randMinMax(4, 12) + "s infinite linear;")
+        let time = randMinMax(4, 12);
         newGif.style.animationName = randFromArray(animations);
-        newGif.style.animationDuration = randMinMax(500,5000) + "ms"
+        newGif.style.animationDuration = randMinMax(500,5000) + "ms";
         document.body.appendChild(newGif);
+        await sleep(time * 1000);
+        document.body.removeChild(newGif);
     }
 
     function sleep(ms) {
