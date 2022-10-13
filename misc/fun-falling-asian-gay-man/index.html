@@ -88,7 +88,7 @@
         const newGif = document.createElement("img");
         newGif.src = gifSrc;
         newGif.classList.add('gifAnimated');
-        newGif.style.left = (randMinMax(0, 200) - 50) + "%";
+        newGif.style.left = (randMinMax(0, 120) - 10) + "%";
         let time = randMinMax(4, 12);
         newGif.style.animationName = randFromArray(animations);
         newGif.style.animationDuration = randMinMax(500,5000) + "ms";
