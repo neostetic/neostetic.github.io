@@ -52,10 +52,29 @@
             transform: rotate(720deg);
         }
     }
+
+    .container {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        padding: 120px 0;
+        z-index: 99;
+    }
 </style>
 <body onload="onLoad()">
+<div class="container">
+    <input id="input" placeholder="source to image" type="file"/>
+</div>
 <img class="gifAnimated" src="gif.gif" height="128"/>
 <script>
+    document.getElementById("input").onchange = () => {
+        let image = document.getElementById("input").files[0];
+        let reader = new FileReader();
+        reader.onload = function(e) {gifSrc = e.target.result;}
+        reader.readAsDataURL(image);
+    }
+
     const onLoad = async () => {
         createGif();
         await sleep(randMinMax(300,1000));
@@ -69,7 +88,7 @@
         const newGif = document.createElement("img");
         newGif.src = gifSrc;
         newGif.classList.add('gifAnimated');
-        newGif.style.left = randMinMax(0, 100) + "%";
+        newGif.style.left = (randMinMax(0, 200) - 50) + "%";
         let time = randMinMax(4, 12);
         newGif.style.animationName = randFromArray(animations);
         newGif.style.animationDuration = randMinMax(500,5000) + "ms";
