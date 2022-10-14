@@ -79,7 +79,7 @@ const writePerLetter = async (text, into) => {
 }
 
 let websites = [
-    'https://www.linkedin.com/in/jan-pol%C3%A1%C4%8Dek-47768a236/',
+    /*'https://www.linkedin.com/in/jan-pol%C3%A1%C4%8Dek-47768a236/',
     'https://twitter.com/neostetic',
     'https://github.com/neostetic',
     'https://instagram.com/neopogger',
@@ -94,7 +94,7 @@ let websites = [
     'https://neostetic.github.io/Tailwind-UI-Website/',
     'https://pbp-holder.cz',
     'https://machinegunfly.github.io',
-    'https://cookieclicker98.github.io',
+    'https://cookieclicker98.github.io',*/
     './misc/fun-falling-asian-gay-man',
     './misc/css-button-transition',
     './misc/css-purple-popup-recreation',
