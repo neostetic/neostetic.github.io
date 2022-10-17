@@ -69,10 +69,13 @@
 <img class="gifAnimated" src="gif.gif" height="128"/>
 <script>
   document.getElementById("input").onchange = () => {
-    let image = document.getElementById("input").files[0];
-    let reader = new FileReader();
-    reader.onload = function(e) {gifSrc = e.target.result;}
-    reader.readAsDataURL(image);
+    gifSrc = [];
+    for (let i = 0; i < document.getElementById("input").files.length; i++) {
+      let image = document.getElementById("input").files[i];
+      let reader = new FileReader();
+      reader.onload = function(e) {gifSrc.push(e.target.result);}
+      reader.readAsDataURL(image);
+    }
   }
 
   const onLoad = async () => {
@@ -86,7 +89,7 @@
 
   const createGif = async () => {
     const newGif = document.createElement("img");
-    newGif.src = gifSrc;
+    newGif.src = randFromArray(gifSrc);
     newGif.classList.add('gifAnimated');
     newGif.style.left = (randMinMax(0, 120) - 10) + "%";
     let time = randMinMax(4, 12);
