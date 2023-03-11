@@ -20,4 +20,7 @@ git clone https://github.com/neostetic/neostetic.github.io.git
  - Please, before using or cloning this project, read our [License Terms](./LICENSE).
  - **By cloning, you are agreeing to the license and its intent.**
 
+#### WIP
+![image](https://user-images.githubusercontent.com/83291717/224515935-46340e3e-c0e5-47a8-9f99-edaa579d7931.png)
+
 ##### Copyright © 2022 Jan Poláček (neostetic). All rights reserved.
