@@ -444,6 +444,7 @@ p {
 #settings > div {
     padding: 16px 20px;
     background: var(--background);
+    max-width: 90%;
 }
 
 #settings > div > h1 {
