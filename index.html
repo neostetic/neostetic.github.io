@@ -2,154 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NEOSTETIC | 😎 One of the coolest webs on the Internet</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/res/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/res/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/res/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/res/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/res/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/res/assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/res/assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#000000">
-  <link rel="stylesheet" href="res/style/main.css">
+    <title>neostetic</title>
+    <link rel="stylesheet" href="res/style/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/631210626b.js" crossorigin="anonymous"></script>
+    <!--
+           _             ____        __                __
+          (_)___ _____  / __ \____  / /___ _________  / /__
+         / / __ `/ __ \/ /_/ / __ \/ / __ `/ ___/ _ \/ //_/
+        / / /_/ / / / / ____/ /_/ / / /_/ / /__/  __/ ,<
+    __/ /\__,_/_/ /_/_/    \____/_/\__,_/\___/\___/_/|_|
+  /___/
+ 
+            © 2023 - Jan Polacek (neostetic)
+-->
 </head>
-<body>
-<div class="container">
-    <div class="auto-width">
-        <h1 class="yellow-text">NEOSTETIC's COOL WEBSITE</h1>
-        <div class="links">
-            <a class="rainbow" href="https://www.linkedin.com/in/jan-pol%C3%A1%C4%8Dek-47768a236/" target="_blank">linkedin</a>
-            <a class="rainbow" href="https://twitter.com/neostetic" target="_blank">twitter</a>
-            <a class="rainbow" href="https://github.com/neostetic" target="_blank">github</a>
-            <a class="rainbow" href="mailto:gg.polacek@gmail.com" target="_blank">mail</a>
+<body onload="onStart()">
+<div class="container" id="container">
+    <div class="header auto-width">
+        <div class="header-title">
+            <a href="./">
+                NE
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm165.8 21.7c-7.6 8.1-20.2 8.5-28.3 .9s-8.5-20.2-.9-28.3c14.5-15.5 35.2-22.3 54.6-22.3s40.1 6.8 54.6 22.3c7.6 8.1 7.1 20.7-.9 28.3s-20.7 7.1-28.3-.9c-5.5-5.8-14.8-9.7-25.4-9.7s-19.9 3.8-25.4 9.7z"/>
+                </svg>
+                STETIC
+            </a>
         </div>
-        <br>
-        <br>
-        <div class="text-center border">
-            <img src="res/assets/IMG_1723.png" width="620"/>
+        <div class="header-child">
+            <a href="./" class="bold">Home</a>
+            <a href="./">Projects</a>
+            <a href="./">Contact</a>
         </div>
-        <br>
-        <div class="text-center">
-            <h1 class="comics">Hello GUys!</h1>
-            <div class="classic">
-                WELCOME TO MY NEW <span class="rainbow comics">COOL</span> WEBSITE<br>
-                I'M A DESIGNER, PROGRAMMER AND WEB DEVELOPER !!!<br>
-                (also trying to be a <span class="rainbow comics">musician</span>)<br>
-                <br>
-                LET ME SHOW YOU WHAT I CAN DO
+    </div>
+    <div class="slidetext"></div>
+    <div class="content">
+        <div class="content-head auto-width">
+            <div class="flex content-emoji">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm165.8 21.7c-7.6 8.1-20.2 8.5-28.3 .9s-8.5-20.2-.9-28.3c14.5-15.5 35.2-22.3 54.6-22.3s40.1 6.8 54.6 22.3c7.6 8.1 7.1 20.7-.9 28.3s-20.7 7.1-28.3-.9c-5.5-5.8-14.8-9.7-25.4-9.7s-19.9 3.8-25.4 9.7z"/>
+                </svg>
+            </div>
+            <div class="flex card card-shadow">
+                <h1>Welcome to my website</h1>
+                <h2>My name is neostetic</h2>
+                <p>
+                    I'm self-thought designer, web-developer, web-designer and programmer based in Czech Republic
+                </p>
+                <a href="#" class="button">See my projects</a>
             </div>
         </div>
-        <br>
-        <div class="devine">
-            <button id="button1" class="border">PROJECTS</button>
-            <button id="button2" class="border">WHO THE F*CK AM I</button>
-            <button id="button3" class="border">CONTACT</button>
-            <button id="button4" class="border rainbow">RANDOM SH*T</button>
-        </div>
-        <br>
-        <br>
-        <span id="projects"></span>
-        <h2 class="comics">Projects</h2>
-        <div class="devine classic">
-            <ul>
-                <li>🖌️ EFRL Graphics (<a href="https://www.facebook.com/EFRLTeam" target="_blank">show</a>)</li>
-                <li>🚗 Autodeformace Website (<a href="http://autodeformace.cz" target="_blank">visit</a>)</li>
-                <li>🖌️ Mezi Kuželkami Podcast Cover (<a href="https://rss.com/podcasts/mezikuzelkami/" target="_blank">show</a>)</li>
-                <li>🏎️ OGO Racing Website (<a href="https://ogoracing.clanweb.eu" target="_blank">visit</a>)</li>
-                <li>🏎️ OGO Racing Logo (<a href="https://dribbble.com/shots/18359228-fromule-ogoracing" target="_blank">show</a>)</li>
-                <li>📝 Planrr Website (<a href="https://neostetic.github.io/Planrr/" target="_blank">visit</a>)</li>
-                <li>💬 Chat App/Website (<a href="https://zenith-airy-cabinet.glitch.me" target="_blank">visit</a>)</li>
-                <li>🌐 Linux Shells Website [CZ] (<a href="https://neostetic.github.io/Linux-Shells/" target="_blank">visit</a>)</li>
-                <li>📣 My Own Translator (<a href="https://stripe-thread-feet.glitch.me" target="_blank">visit</a>)</li>
-                <li>🎲 RobuxRoll (RollOrbit) (<a href="https://robuxroll.github.io" target="_blank">visit</a>)</li>
-                <li>🌐 Tailwind UI Website [CZ] (<a href="https://neostetic.github.io/Tailwind-UI-Website/" target="_blank">visit</a>)</li>
-                <li>🖌️ LowPusle Logo/Graphics (<a href="https://dribbble.com/shots/15207310-bolt-design" target="_blank">show</a>)</li>
-                <li>🖌️ Rustid Crew Logo (<a href="https://dribbble.com/shots/15035503-rustid-crew" target="_blank">show</a>)</li>
-                <li>🧱 Just Bunker JAVA Game (<a href="https://github.com/neostetic/project" target="_blank">visit</a>)</li>
-                <li>🖌️ Aquaz Esport Logo (<a href="https://dribbble.com/shots/14974444-water-logo" target="_blank">show</a>)</li>
-                <li>🖌️ QUIL Logo/Graphics (<a href="https://dribbble.com/shots/14924287-bear-vector-logo" target="_blank">show</a>)</li>
-                <li>🏍️ PBP Holder Website (<a href="https://pbp-holder.cz" target="_blank">visit</a>)</li>
-                <li>📝 Machinegunfly Web (<a href="https://machinegunfly.github.io" target="_blank">visit</a>)</li>
-                <li>🍪 Cookieclicker98 (<a href="https://cookieclicker98.github.io" target="_blank">visit</a>)</li>
-            </ul>
-        </div>
-        <br>
-        <img class="rotate" width="550" src="res/assets/computer.png"/>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2 id="about" class="comics">Who the f*ck am I?</h2>
-        <br>
-        <div class="classic">
-            Hello everyone! My name is <span class="rainbow">Jan Poláček</span> and I come from Czech Republic.
-            My passion is to always create stuff... I like to design and develop websites, playing guitar, design logos,
-            design, design, design...<br>
-            <br>
-            Oh, almost forgot... I'm a programmer that knows <span class="rainbow">JAVA</span>, <span class="rainbow">JavaScript</span>,
-            <span class="rainbow">React</span>, <span class="rainbow">HTML</span>, <span class="rainbow">CSS</span> and
-            <span class="rainbow">Python</span> a little.<br>
-            <br>
-            I am also a <span class="rainbow">humorist</span>. I like to have <span class="rainbow">fun</span>.
-            So if you want to get in touch with me, HIT ME UP!
-        </div>
-        <br>
-        <br>
-        <div class="border">
-            <img src="res/assets/meme_1.png"/>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2 id="contact" class="comics">Contact</h2>
-        <br>
-        <div class="devine win-icons">
-            <a class="win-icon" href="https://www.linkedin.com/in/jan-pol%C3%A1%C4%8Dek-47768a236/" target="_blank">
-                <img src="res/assets/icon_8.png" height="48" width="48"/>
-                LinkedIn
-            </a>
-            <a class="win-icon" href="https://twitter.com/neostetic" target="_blank">
-                <img src="res/assets/icon_3.png" height="48" width="48"/>
-                Twitter
-            </a>
-            <a class="win-icon" href="mailto:gg.polacek@gmail.com" target="_blank">
-                <img src="res/assets/icon_6.png" height="48" width="48"/>
-                Mail
-            </a>
-            <a class="win-icon" href="https://github.com/neostetic" target="_blank">
-                <img src="res/assets/icon_9.png" height="48" width="48"/>
-                GitHub
-            </a>
-            <a class="win-icon" href="https://instagram.com/neopogger" target="_blank">
-                <img src="res/assets/icon_7.png" height="48" width="48"/>
-                Instagram
-            </a>
-            <a class="win-icon" href="https://steamcommunity.com/id/pixel08" target="_blank">
-                <img src="res/assets/icon_5.png" height="48" width="48"/>
-                Steam
-            </a>
-        </div>
-        <br>
-        <br>
-        <div class="border">
-            <img src="res/assets/meme_2.png"/>
+        <h1>What I can offer</h1>
+        <div class="content-head auto-width">
+            <div class="flex card card-shadow w33">
+                <h2>Web design</h2>
+                <div>
+                    <span class="code-mark">Node</span>
+                    <span class="code-mark">React</span>
+                    <span class="code-mark">HTML</span>
+                    <span class="code-mark">CSS</span>
+                    <span class="code-mark">JavaScript</span>
+                </div>
+                <p>
+                    Web Design is my passion... I could also say that I'm handsome as my websites
+                </p>
+                <a href="#" class="button">See my projects</a>
+            </div>
+            <div class="flex card card-shadow w33">
+                <h2>Graphic design</h2>
+                <div>
+                    <span class="code-mark">Illustrator</span>
+                    <span class="code-mark">Photoshop</span>
+                    <span class="code-mark">After Effects</span>
+                </div>
+                <p>
+                    I'm a graphic designer since 2018 and I'm good at it - you can trust me :)
+                </p>
+                <a href="#" class="button">See my projects</a>
+            </div>
+            <div class="flex card card-shadow w33">
+                <h2>Programming</h2>
+                <div>
+                    <span class="code-mark">Java</span>
+                    <span class="code-mark">Python</span>
+                    <span class="code-mark">C</span>
+                    <span class="code-mark">GitHub</span>
+                </div>
+                <p>
+                    "[hard keyboard typing] Aaaaaand... done!" - yes... I can code
+                </p>
+                <a href="https://github.com/neostetic" target="_blank" class="button">See my GitHub</a>
+            </div>
         </div>
     </div>
-    <div class="footer comics">
-        (c) 2022 - Jan Poláček (neostetic)
+    <svg class="content-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill-opacity="1"
+              d="M0,96L18.5,128C36.9,160,74,224,111,240C147.7,256,185,224,222,181.3C258.5,139,295,85,332,85.3C369.2,85,406,139,443,138.7C480,139,517,85,554,80C590.8,75,628,117,665,112C701.5,107,738,53,775,53.3C812.3,53,849,107,886,117.3C923.1,128,960,96,997,90.7C1033.8,85,1071,107,1108,133.3C1144.6,160,1182,192,1218,181.3C1255.4,171,1292,117,1329,101.3C1366.2,85,1403,107,1422,117.3L1440,128L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"></path>
+    </svg>
+    <div class="content content-alt">
+        <div class="content-head auto-width">
+            <div>
+                <!--                <h1>Projects</h1>-->
+            </div>
+        </div>
+    </div>
+    <div id="settings">
+        <div class="flex card card-shadow">
+            <h1>Change Color Pallet</h1>
+            <div class="colors" id="colors"></div>
+            <button class="submit" id="submit">Submit</button>
+        </div>
+    </div>
+    <div id="settingsButton">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M481.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-30.9 28.1c-7.7 7.1-11.4 17.5-10.9 27.9c.1 2.9 .2 5.8 .2 8.8s-.1 5.9-.2 8.8c-.5 10.5 3.1 20.9 10.9 27.9l30.9 28.1c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-39.7-12.6c-10-3.2-20.8-1.1-29.7 4.6c-4.9 3.1-9.9 6.1-15.1 8.7c-9.3 4.8-16.5 13.2-18.8 23.4l-8.9 40.7c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-8.9-40.7c-2.2-10.2-9.5-18.6-18.8-23.4c-5.2-2.7-10.2-5.6-15.1-8.7c-8.8-5.7-19.7-7.8-29.7-4.6L69.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l30.9-28.1c7.7-7.1 11.4-17.5 10.9-27.9c-.1-2.9-.2-5.8-.2-8.8s.1-5.9 .2-8.8c.5-10.5-3.1-20.9-10.9-27.9L8.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l39.7 12.6c10 3.2 20.8 1.1 29.7-4.6c4.9-3.1 9.9-6.1 15.1-8.7c9.3-4.8 16.5-13.2 18.8-23.4l8.9-40.7c2-9.1 9-16.3 18.2-17.8C213.3 1.2 227.5 0 242 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l8.9 40.7c2.2 10.2 9.4 18.6 18.8 23.4c5.2 2.7 10.2 5.6 15.1 8.7c8.8 5.7 19.7 7.7 29.7 4.6l39.7-12.6c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM242 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/>
+        </svg>
     </div>
 </div>
-<div class="clippy">
-    <img src="res/assets/clippy.png" id="clippy"/>
-    <div class="clippy-bubble" id="clippyBubble">Please do not touch me!</div>
-</div>
-<div class="loader" id="loader">
-    <div class="warning"></div>
-    <div class="okay" id="okay"></div>
-    <div class="loading" id="loading"></div>
+<div id="loader">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm165.8 21.7c-7.6 8.1-20.2 8.5-28.3 .9s-8.5-20.2-.9-28.3c14.5-15.5 35.2-22.3 54.6-22.3s40.1 6.8 54.6 22.3c7.6 8.1 7.1 20.7-.9 28.3s-20.7 7.1-28.3-.9c-5.5-5.8-14.8-9.7-25.4-9.7s-19.9 3.8-25.4 9.7z"/>
+    </svg>
 </div>
 <script src="res/script/main.js"></script>
 </body>
