@@ -21,6 +21,7 @@
                 background-color var(--transition) .2s,
                 box-shadow var(--transition) .2s,
                 fill var(--transition) .2s;
+    scroll-behavior: smooth;
 }
 
 .noselect, br {
@@ -211,6 +212,23 @@ p {
     }
 }
 
+.card-img {
+    max-width: 100%;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid black;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.flex-each {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .container:after {
     overflow: hidden;
     position: fixed;
@@ -344,12 +362,16 @@ p {
     width: 100%;
 }
 
-.content-head {
+.content-each {
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: row;
     gap: 40px;
+}
+
+.baseline {
+    align-items: baseline !important;
 }
 
 .content-emoji {
@@ -551,12 +573,23 @@ p {
 }
 
 @media screen and (max-width: 1300px) {
+    .card-img {
+        margin-top: 20px;
+        aspect-ratio: 16 / 9;
+    }
+
     .auto-width {
         width: 100%;
         padding: 0 32px;
     }
 
-    .content-head {
+    .baseline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-each {
         flex-direction: column;
     }
 
