@@ -221,6 +221,76 @@ p {
     object-fit: cover;
 }
 
+.tv-card {
+    position: relative;
+    width: 700px;
+    padding: 32px;
+    padding-left: 300px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 20px 20px black;
+    transition: var(--transition) .2s;
+    pointer-events: initial;
+}
+
+.tv-card:hover {
+    box-shadow: 17px 17px black;
+}
+
+.tv-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.image-to-tv {
+    position: absolute;
+    left: -50px;
+    top: calc(50% - 100px);
+    aspect-ratio: 4/3;
+    height: 200px;
+    width: 300px;
+    background-color: #362F29;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 15px 15px black;
+    animation: tv-rotate-hover 2s ease infinite;
+    cursor: pointer;
+    transition: .2s;
+}
+
+@keyframes tv-rotate-hover {
+    0% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+.image-to-tv > img:nth-child(1) {
+    z-index: 3;
+    position: absolute;
+}
+
+.image-to-tv > img:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    left: 10px;    
+    object-fit: cover;
+    z-index: 2;
+    width: 230px;
+    height: 180px;
+}
+
 .flex-each {
     display: flex;
     justify-content: center;
@@ -449,6 +519,10 @@ p {
     }
 }
 
+#contact {
+    padding: 128px 32px;
+}
+
 #settings {
     display: none;
     position: fixed;
@@ -612,5 +686,17 @@ p {
 
     h2 {
         font-size: 28px;
+    }
+
+    .image-to-tv {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 40px;
+    }
+
+    .tv-card {
+        padding: 20px;
+        width: calc(100% - 64px);
     }
 }

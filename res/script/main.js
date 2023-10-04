@@ -52,7 +52,12 @@ let colors = [
 ]
 
 let settings = document.getElementById("settings")
-document.getElementById("submit").onclick = async () => {
+// document.getElementById("submit").onclick = async () => {
+//     settings.style.opacity = 0
+//     await sleep(200)
+//     settings.style.display = "none"
+// }
+settings.onclick = async () => {
     settings.style.opacity = 0
     await sleep(200)
     settings.style.display = "none"
