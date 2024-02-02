@@ -221,6 +221,25 @@ p {
     object-fit: cover;
 }
 
+.card-links, .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+    padding-bottom: 14px;
+}
+
+.card-links > a, .footer-links > a, .aboutme-text > a {
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    border-bottom: 1px dashed black;
+}
+
+.card-links > a:hover, .footer-links > a:hover, .aboutme-text > a:hover {
+    border-bottom: 1px solid black;
+}
+
 .tv-card {
     position: relative;
     width: 700px;
@@ -500,8 +519,18 @@ p {
     box-shadow: 0 0 0 5px var(--accent-color-primary), 0 0 0 10px var(--accent-color-secondary);
 }
 
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--accent-color-primary);
+    width: 100%;
+    padding: 24px;
+}
+
 .slidetext:after {
-    content: 'I AM NOT OKAY';
+    content: 'I LIKE TO CREATE STUFF';
     position: relative;
     top: 0;
     left: 0;
@@ -519,7 +548,7 @@ p {
     }
 }
 
-#contact {
+#about {
     padding: 128px 32px;
 }
 
@@ -591,12 +620,42 @@ p {
     transition: var(--transition) .2s;
 }
 
+.aboutme-text {
+    width: 500px;
+}
+
 .submit:hover {
     transform: scale(1.02);
 }
 
 .submit:active {
     transform: scale(1.05);
+}
+
+#scrollUpButton {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    cursor: pointer;
+    transition: .2s var(--transition);
+    background: var(--background);
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+#scrollUpButton > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#scrollUpButton > a > svg {
+    height: 26px;
 }
 
 #settingsButton {
@@ -698,5 +757,26 @@ p {
     .tv-card {
         padding: 20px;
         width: calc(100% - 64px);
+    }
+
+    .aboutme-text {
+        padding-top: calc(1/20 * 100vw);
+        width: 100%;
+    }
+
+    #settingsButton, #scrollUpButton {
+        right: auto;
+        left: 20px;
+    }
+
+    .footer {
+        gap: 12px;
+        padding-left: 76px;
+    }
+
+    .footer-links, .footer {
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
     }
 }
