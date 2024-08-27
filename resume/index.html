@@ -3,9 +3,835 @@
 <head>
     <meta charset="UTF-8">
     <title>Resume | Jan Poláček</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pixelbite-css/dist/experimental/pixelbite.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pixelbite-css/dist/experimental/pixelbite.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/631210626b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.1.0/fontfaceobserver.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-Thin.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-Light.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../res/style/Poppins/Poppins-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        /**
+ * Minified by jsDelivr using clean-css v5.3.2.
+ * Original file: /gh/pixelbite-css/dist@master/experimental/pixelbite.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);@import url(https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap);:root {
+    --font-family: 'Poppins',sans-serif;
+    --font-mono-family: 'Fira Mono',monospace;
+    --primary-color: #5920B0;
+    --secondary-color: #9575C6;
+    --success-color: #60D130;
+    --danger-color: #D13030;
+    --warning-color: #DFAF2A;
+    --info-color: #26C7E7
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    max-width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+    background-size: cover;
+    background-position: center
+}
+
+:focus {
+    outline: 1px solid var(--secondary-color)
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.debugSelection {
+    outline: 2px dashed var(--danger-color);
+    z-index: 9999;
+    background-image: linear-gradient(to bottom,rgba(255,0,0,.2) 0,rgba(255,0,0,.2) 100%),linear-gradient(to bottom,rgba(255,0,0,.02) 0,rgba(255,0,0,.02) 100%)!important;
+    background-clip: content-box,padding-box!important
+}
+
+code:focus {
+    outline: 0
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%
+}
+
+body {
+    overflow-y: auto;
+    position: relative
+}
+
+a {
+    color: var(--primary-color);
+    fill: var(--primary-color);
+    transition: color .2s,transform .2s,text-decoration .2s,opacity .2s
+}
+
+a:hover {
+    transform: scale(1.02);
+    opacity: .5
+}
+
+.paragraph,h1,h2,h3,h4 {
+    margin: 0 0 .5rem 0
+}
+
+h1 {
+    font-size: 42px
+}
+
+h2 {
+    font-size: 32px
+}
+
+h3 {
+    font-size: 28px
+}
+
+h4 {
+    font-size: 22px
+}
+
+h5 {
+    font-size: 18px
+}
+
+pre {
+    overflow: auto;
+    color: var(--secondary-color);
+    width: 100%;
+    font-family: var(--font-mono-family);
+    counter-reset: line
+}
+
+.codeblock {
+    padding: 16px 22px;
+    background: rgba(128,128,128,.02);
+    overflow: auto;
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color)
+}
+
+pre span {
+    counter-increment: line;
+    font: var(--font-mono-family);
+    text-align: right;
+    position: relative
+}
+
+pre.numberedLines span::before {
+    content: counter(line);
+    display: inline-block;
+    width: 1em;
+    margin-right: 1em;
+    color: rgba(128,128,128,.6);
+    font: var(--font-mono-family);
+    -webkit-user-select: none
+}
+
+code {
+    font-family: var(--font-mono-family)
+}
+
+pre span.highlight {
+    overflow: hidden
+}
+
+pre span.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 20px 42px -30px var(--info-color),inset 0 -20px 20000px -100px var(--info-color),inset 4px 0 0 var(--info-color);
+    opacity: 1;
+    z-index: -1
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: #fff
+}
+
+table td,table th {
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    padding: 8px
+}
+
+table th {
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    text-align: left
+}
+
+table tr:nth-child(2n) {
+    background-color: rgba(128,128,128,.06);
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color)
+}
+
+table tr:hover {
+    background-color: rgba(128,128,128,.15);
+    transition: .1s
+}
+
+.pointer {
+    cursor: pointer
+}
+
+button {
+    position: relative;
+    padding: .6rem 1rem;
+    font-weight: 600;
+    transition: opacity .2s,box-shadow .1s;
+    border: none;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: .2rem;
+    opacity: .8
+}
+
+button:hover {
+    opacity: 1
+}
+
+button:active {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(128,128,128,.1)
+}
+
+input {
+    padding: .6rem .8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(128,128,128,.5);
+    transition: .2s
+}
+
+.floatInput>input {
+    padding: 1.4rem 1rem .6rem 1rem;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid rgba(128,128,128,.5);
+    box-shadow: 0 0 0 var(--secondary-color);
+    transition: .2s
+}
+
+input:focus {
+    border: 1px solid rgba(128,128,128,.9);
+    outline: 0;
+    box-shadow: 0 0 0 3px var(--secondary-color)
+}
+
+.floatInput>label {
+    position: absolute;
+    opacity: .5;
+    top: 1.2rem;
+    left: 1.2rem;
+    transform: scale(1);
+    transition: transform .2s,top .2s,left .2s
+}
+
+.floatInput .inputhastext,.floatInput:focus-within label {
+    top: .2rem;
+    left: .86rem;
+    transform: scale(.9)
+}
+
+.sticky {
+    top: 0;
+    left: 0;
+    position: sticky;
+    position: -webkit-sticky
+}
+
+img {
+    object-fit: cover
+}
+
+.auto-width {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 14px
+}
+
+.auto-menu-button {
+    display: none
+}
+
+.hidden {
+    display: none!important
+}
+
+.fixed {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0
+}
+
+.close-x {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: 0 0;
+    width: 32px;
+    height: 32px
+}
+
+.close-x:after,.close-x:before {
+    content: '';
+    position: absolute;
+    border-right: 2px solid gray;
+    border-top: 2px solid gray;
+    width: 10px;
+    height: 10px
+}
+
+.close-x:after {
+    transform: rotate(45deg);
+    top: 10px;
+    left: 3px
+}
+
+.close-x:before {
+    transform: rotate(-135deg);
+    top: 10px;
+    left: 18px
+}
+
+.buttonOutline {
+    padding: .5rem .9rem;
+    background: 0 0;
+    border: .1rem var(--primary-color) solid;
+    color: var(--primary-color)
+}
+
+.buttonHoverDark {
+    box-shadow: inset 0 0 0 6000px rgba(128,128,128,0);
+    transition: box-shadow .2s
+}
+
+.buttonHoverDark:hover {
+    box-shadow: inset 0 0 0 6000px rgba(128,128,128,.1)
+}
+
+.flex,.flexAlignItems,.flexBottom,.flexCenter,.flexColumn,.flexDirection,.flexJustifyContent,.flexLeft,.flexMiddle,.flexRight,.flexRow,.flexTop {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center
+}
+
+.flexCenter {
+    justify-content: center
+}
+
+.flexMiddle {
+    align-items: center
+}
+
+.flex-column,.flexColumn {
+    flex-direction: column
+}
+
+.flex-row,.flexRow {
+    flex-direction: row
+}
+
+.flexSpaceBetween {
+    justify-content: space-between
+}
+
+.flexWrap {
+    flex-wrap: wrap
+}
+
+.flexNowrap {
+    flex-wrap: nowrap
+}
+
+.flexWrapReverse {
+    flex-wrap: wrap-reverse
+}
+
+.flexLeft {
+    align-items: flex-start
+}
+
+.flexRight {
+    align-items: flex-end
+}
+
+.flexTop {
+    justify-content: flex-start
+}
+
+.flexBottom {
+    justify-content: flex-end
+}
+
+.fullWidth {
+    width: 100%
+}
+
+.fullHeight {
+    height: 100%
+}
+
+.windowWidth {
+    width: 100vw
+}
+
+.windowHeight {
+    height: 100vh
+}
+
+.grid {
+    display: grid
+}
+
+.label {
+    position: relative;
+    top: -3px;
+    color: gray;
+    text-decoration: none;
+    display: inline-block;
+    padding: .1rem .2rem;
+    font-weight: 600;
+    font-size: 10px;
+    background: 0 0;
+    border: .1rem gray solid;
+    border-radius: .2rem
+}
+
+.label:hover {
+    text-decoration: none
+}
+
+.shadow {
+    box-shadow: 0 0 20px rgba(0,0,0,.2)
+}
+
+.slideshow {
+    position: relative;
+    overflow: hidden
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: left .5s
+}
+
+.slide>img {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.slide>div {
+    z-index: 2
+}
+
+.slide-shadow:before {
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 -800px 500px -500px rgba(255,255,255,.9);
+    width: 100%;
+    height: 100%;
+    content: ''
+}
+
+.textOverflow {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.modal {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,.2)
+}
+
+.modal-hover {
+    transition: background-color .2s;
+    overflow: hidden;
+    border-radius: 8px
+}
+
+.modal-hover:hover {
+    background-color: rgba(128,128,128,.1);
+    overflow: hidden;
+    font-size: 16px
+}
+
+.slider {
+    position: relative;
+    aspect-ratio: 2/1;
+    width: 62px;
+    cursor: pointer
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    border-radius: 9999999px;
+    pointer-events: none;
+    transition: .2s
+}
+
+.slider:after {
+    position: absolute;
+    content: '';
+    height: calc(100% - .4rem);
+    top: 0;
+    left: 0;
+    aspect-ratio: 1/1;
+    background: #fff;
+    border: .2rem solid gray;
+    border-radius: 9999999px;
+    pointer-events: none;
+    transition: .2s
+}
+
+.slider:checked:after {
+    left: 50%;
+    border: .2rem solid var(--info-color)
+}
+
+.slider:checked:before {
+    background: var(--info-color)
+}
+
+.slider:focus-within {
+    box-shadow: none
+}
+
+.searchbar {
+    position: relative
+}
+
+.searchbar>input {
+    width: 100%
+}
+
+.searchbar>div {
+    width: 100%;
+    transition: .2s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 4
+}
+
+.searchbar:focus-within>div {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    height: auto;
+    max-height: 600%
+}
+
+.search-values>div {
+    width: 100%;
+    background: #fff;
+    padding: 8px 16px;
+    transition: background-color .2s;
+    box-shadow: inset 0 -20px 20px rgba(128,128,128,.07);
+    cursor: pointer
+}
+
+.search-values>div:hover {
+    background: #e9e9e9
+}
+
+.dropdown>div>div {
+    color: #000;
+    background: #fff;
+    padding: 6px 32px 6px 10px;
+    width: auto;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 14px
+}
+
+.dropdown>div>div:hover {
+    background: #ddd
+}
+
+.dropdown>div {
+    border: 1px solid gray;
+    border-radius: 6px;
+    position: absolute;
+    flex-direction: column!important;
+    overflow: hidden
+}
+
+.dropdown {
+    position: relative;
+    z-index: 50
+}
+
+.dropdown>button {
+    min-width: 128px
+}
+
+.line {
+    width: 100%;
+    padding: 1px;
+    margin: 0 20px;
+    background-color: var(--secondary-color);
+    border-radius: 5000px
+}
+
+.loader,.loader-page {
+    opacity: 1;
+    transition: .4s
+}
+
+.loader-page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #fff
+}
+
+.loader-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border-top: 4px transparent solid;
+    border-left: 4px var(--secondary-color) solid;
+    border-bottom: 4px var(--secondary-color) solid;
+    border-right: 4px var(--secondary-color) solid;
+    animation: rotate 2s ease-in-out infinite
+}
+
+.loader-icon:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -17px;
+    left: -17px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-top: 4px transparent solid;
+    border-left: 4px var(--primary-color) solid;
+    border-bottom: 4px var(--primary-color) solid;
+    border-right: 4px var(--primary-color) solid;
+    animation: rotate 2.5s ease-in-out infinite
+}
+
+.loader-line {
+    background: -webkit-repeating-linear-gradient(45deg,#fff 0,#fff 33%,#dedede 33%,#dedede 66%,#fff 66%,#fff 100%);
+    background: -o-repeating-linear-gradient(45deg,#fff 0,#fff 33%,#dedede 33%,#dedede 66%,#fff 66%,#fff 100%);
+    background: -moz-repeating-linear-gradient(45deg,#fff 0,#fff 33%,#dedede 33%,#dedede 66%,#fff 66%,#fff 100%);
+    background: repeating-linear-gradient(45deg,#fff 0,#fff 33%,#dedede 33%,#dedede 66%,#fff 66%,#fff 100%);
+    background-size: 24px;
+    width: 200px;
+    height: 8px;
+    border: 1px solid rgba(128,128,128,.5);
+    border-radius: 50px;
+    animation: toSide 2s linear infinite
+}
+
+@keyframes toSide {
+    from {
+        background-position-x: 0
+    }
+
+    to {
+        background-position-x: 100%
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(720deg)
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .auto-width {
+        width:1000px
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .auto-width {
+        width:100%;
+        padding-left: 14px;
+        padding-right: 14px
+    }
+
+    .auto-menu,.auto-menu>* {
+        flex-direction: column;
+        gap: 12px
+    }
+
+    .auto-menu-button {
+        display: flex
+    }
+
+    .header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .sticky {
+        position:relative
+    }
+
+    .dashboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+        width: 100%
+    }
+
+    .dashboard-menu {
+        flex-direction: row
+    }
+
+    .dashboard-menu>div {
+        flex-direction: row
+    }
+
+    .dashboard>div {
+        padding: 0;
+        margin: 0;
+        gap: 0;
+        width: 100%!important
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .auto-size,.auto-size>div {
+        width:100%!important
+    }
+
+    .auto-size>div {
+        margin-top: 12px;
+        margin-bottom: 12px
+    }
+}
+
+/*# sourceMappingURL=/sm/885963679d51f8a7750202d0c0da2a476c12374f12b67f9a92caa62e0a359e70.map */
+
+    </style>
     <!--
            _             ____        __                __
           (_)___ _____  / __ \____  / /___ _________  / /__
@@ -20,5 +846,6 @@
 <body class="bg-black">
     <component path="./components/cv_preload.html"></component>
 <script src="https://cdn.jsdelivr.net/gh/pixelbite-css/dist/experimental/pixelbite.js"></script>
+<script src="../res/script/toolbar.js"></script>
 </body>
 </html>
