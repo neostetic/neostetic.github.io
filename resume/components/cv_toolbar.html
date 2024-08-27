@@ -1,0 +1,30 @@
+<div class="pos-fixed bottom-0 w-100% p-24px-0 flexCenter flexMiddle flexColumn g-12px">
+    <div class="toolbar toggle-langMenu hidden">
+        ${`
+            let stringBuilder = ""
+            let languages = ${variables.languages}
+            let current_language = pixelbite.query.lang || "${lang}"
+            for (let i = 0; i < languages.length; i++) {
+                if (languages[i] === current_language) {
+                    stringBuilder += "<div class='toolbarbubble ar-1/1 fw-600 bg-rgba(128,128,128,.3)-!important' href='./?lang=" + languages[i] + "'>" + languages[i].toUpperCase() + "</div>"
+                } else {
+                    stringBuilder += "<div class='toolbarbubble ar-1/1 fw-600' href='./?lang=" + languages[i] + "'>" + languages[i].toUpperCase() + "</div>"
+                }
+            }
+            return stringBuilder
+        `}
+    </div>
+    <div class="toolbar">
+        <div onclick="changeTheme()" class="toolbarbubble ar-1/1">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+        <div class="toolbarbubble ar-1/1" onclick="toggleElement('toggle-langMenu')">
+            <i class="fa-solid fa-language"></i>
+        </div>
+        <div class="h-24px b-1px-solid-rgba(128,128,128,.15)"></div>
+        <div class="toolbarbubble ar-1/1">
+            <i class="fa-solid fa-file-export"></i>
+        </div>
+    </div>
+</div>
+</div>

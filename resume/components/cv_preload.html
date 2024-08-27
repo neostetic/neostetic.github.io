@@ -1,4 +1,20 @@
 <component path="./cv.html" class="w-100% minH-100vh flexCenter flexMiddle bg-black" lang="${`
-    lang = pixelbite.query.lang || 'cz'
-    return lang
+    let lang = pixelbite.query.lang || 'en'
+    let languages = ${variables.languages}
+    for (let i = 0; i < languages.length; i++) {
+        if (lang === languages[i]) {
+            return lang
+        }
+    }
+    return 'en'
+`}"></component>
+<component path="./cv_toolbar.html" lang="${`
+    let lang = pixelbite.query.lang || 'en'
+    let languages = ${variables.languages}
+    for (let i = 0; i < languages.length; i++) {
+        if (lang === languages[i]) {
+            return lang
+        }
+    }
+    return 'en'
 `}"></component>
