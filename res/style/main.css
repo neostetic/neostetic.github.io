@@ -133,6 +133,39 @@ p {
     background: var(--accent-color-secondary);
 }
 
+.corner {
+    position: fixed;
+    bottom: 25px;
+    left: -100px;
+    z-index: 99;
+    width: 300px;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 42px;
+    font-size: 14px;
+    box-shadow: 0 0 0 3px black, 0 0 0 10px white, 0 0 20px 10px rgba(0,0,0,.3);
+    font-weight: 900;
+    cursor: pointer;
+    transition: font-size .1s;
+}
+
+.corner > svg {
+    width: 18px;
+    margin-left: 6px;
+    transition: .1s;
+}
+
+.corner:active {
+    font-size: 16px;
+}
+
+.corner:active > svg {
+    width: 22px;
+}
+
 .code-mark {
     border-radius: 500px;
     border: 2px solid var(--accent-color-secondary);
@@ -195,6 +228,8 @@ p {
     background-size: 16px;
     opacity: .1;
     pointer-events: none;
+    animation: 5s linear infinite rotate;
+    animation-play-state: paused;
 }
 
 .card-shadow:hover {
@@ -202,7 +237,7 @@ p {
 }
 
 .card-shadow:hover:before {
-    animation: 5s linear infinite rotate;
+    animation-play-state: running;
 }
 
 @keyframes rotate {
@@ -540,11 +575,11 @@ p {
 }
 
 @keyframes slideText {
-    from {
+    to {
         margin-left: -200%;
         margin-right: 0%;
     }
-    to {
+    from {
         margin-left: 0%;
         margin-right: -200%;
     }
@@ -769,6 +804,12 @@ p {
     #settingsButton, #scrollUpButton {
         right: auto;
         left: 20px;
+    }
+
+    .corner {
+        left: auto;
+        right: -100px;
+        transform: rotate(-45deg);
     }
 
     .footer {
