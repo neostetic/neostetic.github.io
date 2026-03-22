@@ -225,6 +225,7 @@ svg, path {
     z-index: 110;
     width: 100vw;
     height: 100vh;
+    box-shadow: 0 300px black;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 

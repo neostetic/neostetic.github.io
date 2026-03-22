@@ -9,7 +9,14 @@ const href = async (url, anim) => {
         loader.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
         await wait(600);
     }
-    window.open(url, '_self').focus();
+    await window.open(url, '_self').focus();
+    await wait(1)
+    loader.style.display = "flex"
+    loader.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+    await wait(1)
+    loader.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
+    await wait(600)
+    loader.style.display = "none"
 }
 
 window.addEventListener("load", async () => {
