@@ -22,6 +22,38 @@ const href = async (url, anim) => {
     }
 }
 
+function setupScroller(div) {
+    let src = div.getAttribute('src');
+    let img = new Image();
+    img.src = src;
+
+    img.onload = () => {
+        let ratio = img.height / img.width;
+
+        div.style.backgroundImage = `url('${src}')`;
+        div.style.backgroundSize = `100% auto`;
+        div.style.height = `${div.offsetWidth * ratio}px`;
+
+        if (div._anim) div._anim.cancel();
+
+        div._anim = div.animate([
+        { backgroundPosition: '0px 0px' },
+        { backgroundPosition: `${div.offsetWidth}px 0px` }
+        ], {
+        duration: 10000,
+        iterations: Infinity,
+        easing: 'linear'
+        });
+    };
+}
+
+let scrollers = document.querySelectorAll('.img-scroller');
+scrollers.forEach(setupScroller);
+
+window.addEventListener('resize', () => {
+    scrollers.forEach(setupScroller);
+});
+
 window.addEventListener("load", async () => {
     loader.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
     await wait(510);
