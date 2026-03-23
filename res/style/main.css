@@ -242,6 +242,10 @@ svg, path {
     background: var(--background-accent);
 }
 
+.page-footer {
+    background: var(--background-primary) !important;
+}
+
 .header {
     z-index: 99;
     display: flex;
