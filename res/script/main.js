@@ -15,7 +15,7 @@ const href = async (url, anim) => {
         await wait(1)
         loader.style.display = "flex"
         loader.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
-        await wait(700)
+        await wait(1200)
         loader.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
         await wait(600)
         loader.style.display = "none"
