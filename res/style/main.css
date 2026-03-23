@@ -236,6 +236,28 @@ svg, path {
     font-size: 42px;
 }
 
+#loader-icon {
+    aspect-ratio: 1/1;
+    width: 20px;
+    border-radius: 50%;
+    border-bottom: 2px solid var(--background-secondary);
+    border-left: 2px solid var(--background-secondary);
+    border-top: 2px solid var(--background-secondary);
+    border-right: 2px solid transparent;
+    position: absolute;
+    top: calc(50% + 40px);
+    left: calc(50% - 10px);
+    opacity: 0;
+    transition: .5s;
+    animation: loader-anim .6s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes loader-anim {
+    from {rotate: 0; opacity: 1;}
+    to {rotate: 360deg; opacity: 1;}
+}
+
 .page {
     width: 100vw;
     height: auto;

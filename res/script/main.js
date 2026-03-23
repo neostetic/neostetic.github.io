@@ -1,5 +1,6 @@
 const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const loader = document.getElementById('loader')
+const loaderIcon = document.getElementById('loader-icon')
 
 const href = async (url, anim) => {
     if (anim != false) {
@@ -25,6 +26,7 @@ window.addEventListener("load", async () => {
     loader.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
     await wait(510);
     loader.style.display = "none"
+    loaderIcon.style.display = 'none'
 });
 
 const scroller = document.getElementById("scroller");
