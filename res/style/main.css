@@ -483,7 +483,7 @@ a:hover {
 
 .hero-project > img {
     width: 50%;
-    border-radius: 12px;
+    border-radius: 2px;
 }
 
 .hero-project-alt {
@@ -499,11 +499,22 @@ a:hover {
 
 .hero-project-alt > img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 2px;
 }
 
 .project-container {
     width: 50%;
+}
+
+.project-container-alt {
+    padding: 12px;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
 }
 
 .hero-footer {
@@ -1353,7 +1364,7 @@ a:hover {
     fill: var(--background-accent);
 }
 
-@media (max-width: 1438px) {
+@media (max-width: 1468px) {
     .card-arrow1, 
     .card-arrow2 {
         display: none;
@@ -1369,6 +1380,16 @@ a:hover {
 }
 
 @media (max-width: 1200px) {
+    .contact-link {
+        margin-left: 12px;
+    }
+    
+    .hero-container-alt-2nd > div > a {
+        text-align: left;
+    }
+    .highlight-alt::after, .highlight-alt::before {
+        display: none;
+    }
     .fullpage {
         height: auto;
         max-height: 9999999px;
@@ -1399,8 +1420,12 @@ a:hover {
         width: 100%;
     }
 
-    .project-container {
+    .project-container, .project-container-alt {
         width: 100%;
+    }
+
+    .project-container-alt > * {
+        text-align: left;
     }
 
     .hero-footer {
