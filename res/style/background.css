@@ -18,3 +18,14 @@
   60%  {background-position:0 0,50%,50%}
   100% {background-position:50%,100% 100%,50%}
 }
+
+.parallax-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-img {
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+}
