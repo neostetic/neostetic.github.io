@@ -206,6 +206,7 @@ svg, path {
     padding: 48px 58px;
     max-height: 1100px;
     height: 100vh;
+    height: 100dvh;
     width: 100vw !important;
     max-width: none !important;
 }
@@ -226,6 +227,7 @@ svg, path {
     z-index: 110;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     box-shadow: 0 300px black;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -374,6 +376,7 @@ svg, path {
     gap: 16px;
     opacity: 1;
     height: 100vh;
+    height: 100dvh;
     margin-top: 12px;
 }
 
@@ -1240,6 +1243,7 @@ a:hover {
     z-index: 100;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background: rgba(0,0,0,.2);
     backdrop-filter: blur(5px);
     display: none;
