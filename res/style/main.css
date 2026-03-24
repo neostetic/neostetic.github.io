@@ -994,7 +994,8 @@ a:hover {
 
 .spacer-project {
     width: 100%;
-    margin: 92px;
+    background: var(--background-primary);
+    height: 58px;
 }
 
 .scroller {
