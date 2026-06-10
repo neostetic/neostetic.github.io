@@ -50,11 +50,23 @@ function setupScroller(div) {
 let scrollers = document.querySelectorAll('.img-scroller');
 scrollers.forEach(setupScroller);
 
+let lastWidth = window.innerWidth;
+
 window.addEventListener('resize', () => {
-    scrollers.forEach(setupScroller);
+    if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+
+        scrollers.forEach(setupScroller);
+    }
 });
 
 window.addEventListener("load", async () => {
+    const startYear = 2026;
+    const currentYear = new Date().getFullYear();
+    const yearText = currentYear > startYear
+        ? `${startYear}-${currentYear}`
+        : `${startYear}`;
+    document.getElementById("year").innerHTML = yearText
     loader.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
     await wait(510);
     loader.style.display = "none"

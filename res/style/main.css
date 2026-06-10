@@ -850,17 +850,33 @@ a:hover {
     position: relative;
 }
 
+.landing-img {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    width: 50vw;
+    background: url("../assets/images/me_transparent.png");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 42px;
+}
+
 .rounded-bottom {
     border-radius: 0 0 1em 1em;
 }
 
 .top-text {
-    position: absolute;
+    position: relative;
     font-family: "Lacquer", system-ui;
     font-size: 112px;
     z-index: 9;
-    top: -52px;
-    left: -22px;
+    top: -380px;
+    left: -110px;
     color: var(--primary);
     transform: rotate(12deg);
     text-shadow: 0 0 30px rgba(0,0,0,.2);
@@ -1466,6 +1482,16 @@ a:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .landing-img {
+        position: relative;
+        width: 100vw;
+        min-height: 600px;
+        padding: 0;
+        margin: 0;
+        top: 25px;
+        padding: 0 20vw 42px 20vw;
     }
 
     .hero-project, .hero-project-alt {
