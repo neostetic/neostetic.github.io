@@ -852,13 +852,15 @@ a:hover {
 
 .landing-img {
     position: absolute;
-    top: 0;
+    bottom: 0;
     margin-top: 0;
-    width: 50vw;
+    width: 50%;
+    height: 100%;
+    max-width: 1000px;
+    min-width: 800px;
     background: url("../assets/images/me_transparent.png");
     background-size: cover;
     background-position: center center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1475,7 +1477,7 @@ a:hover {
     .landing {
         flex-direction: column-reverse;
         padding-top: 100px;
-        gap: 32px;
+        gap: 0px;
     }
 
     .landing-container, .landing-alt, .landing-container-big, .hero, .hero-alt{
@@ -1487,7 +1489,7 @@ a:hover {
     .landing-img {
         position: relative;
         width: 100vw;
-        min-height: 600px;
+        height: 700px;
         padding: 0;
         margin: 0;
         top: 25px;
