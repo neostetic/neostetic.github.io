@@ -573,6 +573,14 @@ a:hover {
     position: relative;
 }
 
+.hero-container > div > h3:hover, .hero-container-alt > div > h3:hover {
+    cursor: pointer;
+    position: relative;
+    text-underline-offset: 8px;
+    text-decoration: underline solid 1px var(--primary);
+    margin-bottom: 1.2em;
+}
+
 .hero-container-alt {
     flex-direction: row-reverse;
 }
